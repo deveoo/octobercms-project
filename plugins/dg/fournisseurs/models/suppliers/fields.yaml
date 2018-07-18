@@ -1,0 +1,103 @@
+fields:
+    titre:
+        label: Titre
+        span: auto
+        required: 1
+        type: text
+    slug:
+        label: URL
+        span: auto
+        required: 1
+        preset:
+            field: titre
+            type: slug
+        type: text
+    extrait:
+        label: Extrait
+        size: ''
+        span: full
+        type: textarea
+    description1:
+        label: 'Description 1'
+        size: ''
+        span: auto
+        type: richeditor
+    description2:
+        label: 'Description 2'
+        size: ''
+        span: auto
+        type: richeditor
+    activated:
+        label: 'Activé ?'
+        span: auto
+        type: switch
+tabs:
+    fields:
+        map:
+            label: Map
+            size: ''
+            span: full
+            type: textarea
+            tab: Coordonnées
+        adresse1:
+            label: 'Adresse 1'
+            span: auto
+            required: 0
+            type: text
+            tab: Coordonnées
+        adresse2:
+            label: 'Adresse 2'
+            span: auto
+            type: text
+            tab: Coordonnées
+        email:
+            label: Email
+            span: auto
+            type: text
+            tab: Coordonnées
+        phone:
+            label: Téléphone
+            span: auto
+            type: text
+            tab: Coordonnées
+        fax:
+            label: Fax
+            span: auto
+            required: 0
+            type: text
+            tab: Coordonnées
+        siteweb:
+            label: 'Site web'
+            span: auto
+            placeholder: 'http://'
+            type: text
+            tab: Coordonnées
+        pays:
+            label: Pays
+            span: auto
+            required: 1
+            type: dropdown
+            tab: Coordonnées
+        image:
+            label: 'Image à la une'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Images
+        image2:
+            label: 'Image 2'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            disabled: 0
+            hidden: 0
+            required: 0
+            type: fileupload
+            tab: Images

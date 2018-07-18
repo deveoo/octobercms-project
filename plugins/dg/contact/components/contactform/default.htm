@@ -1,0 +1,31 @@
+
+<form data-request="onSend">
+  {% if errors.all()  %}
+  <ul class="alert alert-danger">
+      {% for error in errors.all() %}
+          <li style="float:none;display:block">{{ error }}</li>
+      {% endfor %}
+  </ul>
+
+  {% endif %}
+  <ul>
+      <li>
+        <input name="nom" id="" type="text" value="" placeholder="{{ 'Nom & prénom'|_ }}" />
+        {% if errors.first('nom')  %}  <div class="alert alert-danger">{{ errors.first('nom') }}</div> {% endif %}
+      </li>
+      <li>
+        <input name="phone" id="" type="text" value="" placeholder="{{ 'Téléphone'|_ }}" />
+        {% if errors.first('phone')  %}   <div class="alert alert-danger">{{ errors.first('phone') }}</div> {% endif %}
+      </li>
+      <li>
+        <input name="email" id="" type="email" value="" placeholder="{{ 'E-mail'|_ }}" />
+        {% if errors.first('email')  %} <div class="alert alert-danger">{{ errors.first('email') }}</div>{% endif %}
+      </li>
+      <li>
+        <textarea name="message" id=""  tabindex="8" placeholder=" {{ 'Message'|_ }}" rows="3" cols="50"></textarea>
+        {{ errors.first('Message') }}
+      </li>
+      <li><input type="submit" id="" class="gform_button button" value=" {{ 'Envoyer'|_ }}" tabindex="9" /></li>
+
+  </ul>
+</form>

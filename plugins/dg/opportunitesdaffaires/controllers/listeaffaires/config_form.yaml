@@ -1,0 +1,10 @@
+name: ListeAffaires
+form: $/dg/opportunitesdaffaires/models/listeopportunites/fields.yaml
+modelClass: dg\OpportunitesDAffaires\Models\ListeOpportunites
+defaultRedirect: dg/opportunitesdaffaires/listeaffaires
+create:
+    redirect: 'dg/opportunitesdaffaires/listeaffaires/update/:id'
+    redirectClose: dg/opportunitesdaffaires/listeaffaires
+update:
+    redirect: dg/opportunitesdaffaires/listeaffaires
+    redirectClose: dg/opportunitesdaffaires/listeaffaires

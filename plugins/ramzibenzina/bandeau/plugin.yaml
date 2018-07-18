@@ -1,0 +1,24 @@
+plugin:
+    name: 'ramzibenzina.bandeau::lang.plugin.name'
+    description: 'ramzibenzina.bandeau::lang.plugin.description'
+    author: 'Ramzi Benzina'
+    icon: oc-icon-image
+    homepage: ''
+permissions:
+    ramzibenzina.bandeau.gerer:
+        tab: 'ramzibenzina.bandeau::lang.bandeau.titre'
+        label: 'ramzibenzina.bandeau::lang.bandeau.gerer'
+navigation:
+    bandeau:
+        label: 'ramzibenzina.bandeau::lang.plugin.name'
+        url: ramzibenzina/bandeau/bandeau
+        icon: icon-image
+        permissions:
+            - ramzibenzina.bandeau.gerer
+        sideMenu:
+            images:
+                label: Images
+                url: ramzibenzina/bandeau/bandeau
+                icon: icon-file-image-o
+                permissions:
+                    - ramzibenzina.bandeau.gerer

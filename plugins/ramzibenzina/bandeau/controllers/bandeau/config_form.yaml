@@ -1,0 +1,10 @@
+name: Bandeau
+form: $/ramzibenzina/bandeau/models/bandeau/fields.yaml
+modelClass: RamziBenzina\Bandeau\Models\Bandeau
+defaultRedirect: ramzibenzina/bandeau/bandeau
+create:
+    redirect: 'ramzibenzina/bandeau/bandeau/update/:id'
+    redirectClose: ramzibenzina/bandeau/bandeau
+update:
+    redirect: ramzibenzina/bandeau/bandeau
+    redirectClose: ramzibenzina/bandeau/bandeau

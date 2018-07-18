@@ -1,0 +1,85 @@
+title = "Tableau de bord"
+url = "/dashboard"
+layout = "interne"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeUrl[en] = "/dashboard"
+
+[session]
+security = "user"
+allowedUserGroups[] = "fournisseur"
+redirect = "login"
+==
+{% component 'session' %}
+
+<div class="dashboard">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!--  <h2>{{'Bienvenue dans votre espace professionnel' |_}} </h2>-->
+          <ul class="dashboard-menu">
+
+              <li>
+                <a href="{{'ma-societe'|page}}" title="dashborad">
+                    <span class="dashIco">
+                      <i class="fa fa-suitcase"></i>
+                    </span>
+                    <span class="dashTitle">
+                      {{'Ma société' |_}}
+                    </span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" title="dashborad">
+                    <span class="dashIco">
+                      <i class="fa fa-camera"></i>
+                    </span>
+                    <span class="dashTitle">
+                      {{'Mes produits' |_}}
+                    </span>
+                </a>
+              </li>
+
+
+              <li>
+                <a href="#" title="dashborad">
+                    <span class="dashIco">
+                      <i class="fa fa-calendar"></i>
+                    </span>
+                    <span class="dashTitle">
+                      {{'Abonnements' |_}}
+                    </span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" title="dashborad">
+                    <span class="dashIco">
+                      <i class="fa fa-user"></i>
+                    </span>
+                    <span class="dashTitle">
+                      {{'Mon Profil' |_}}
+                    </span>
+                </a>
+              </li>
+
+
+              <li>
+                <a href="#" title="dashborad">
+                    <span class="dashIco">
+                      <i class="fa fa-key" aria-hidden="true"></i>
+                    </span>
+                    <span class="dashTitle">
+                      {{'Déconnexion' |_}}
+                    </span>
+                </a>
+              </li>
+          </ul>
+        <div>
+      </div>
+  </div>
+</div>

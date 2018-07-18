@@ -1,0 +1,22 @@
+plugin:
+    name: 'dg.emploi::lang.plugin.name'
+    description: 'dg.emploi::lang.plugin.description'
+    author: 'Ramzi Benzina'
+    icon: oc-icon-briefcase
+    homepage: ''
+permissions:
+    emploi:
+        tab: 'dg.emploi::lang.plugin.name'
+        label: Offres
+navigation:
+    emploi-formation:
+        label: Emplois
+        url: dg/emploi/offres
+        icon: icon-archive
+        permissions:
+            - emploi
+        sideMenu:
+            side-menu-item:
+                label: 'Offres d''emploi'
+                url: dg/emploi/offres
+                icon: icon-align-justify

@@ -1,0 +1,14 @@
+title: Contact
+modelClass: dg\Contact\Models\Contact
+list: $/dg/contact/models/contact/columns.yaml
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+defaultSort:
+    column: created_at
+    direction: asc
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

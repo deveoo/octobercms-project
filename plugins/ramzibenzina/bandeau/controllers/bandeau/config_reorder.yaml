@@ -1,0 +1,4 @@
+title: Bandeau
+modelClass: RamziBenzina\Bandeau\Models\Bandeau
+toolbar:
+    buttons: reorder_toolbar

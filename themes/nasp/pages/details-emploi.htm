@@ -1,0 +1,17 @@
+title = "Détails emploi"
+url = "/detail-emploi/:slug"
+layout = "single-emploi"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeUrl[en] = "/job-details/:slug"
+
+[builderDetails]
+modelClass = "dg\Emploi\Models\Offres"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "titre"
+notFoundMessage = "Record not found"
+==

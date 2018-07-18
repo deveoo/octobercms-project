@@ -1,0 +1,5 @@
+title: Contact
+modelClass: dg\Contact\Models\Contact
+nameFrom: nom_prenom
+toolbar:
+    buttons: reorder_toolbar

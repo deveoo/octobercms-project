@@ -1,0 +1,33 @@
+<form
+    data-request="onSignin">
+	{% if errors.all()  %}
+	  <ul class="alert alert-danger">
+		  {% for error in errors.all() %}
+			  <li style="float:none;display:block">{{ error }}</li>
+		  {% endfor %}
+	  </ul>
+
+	{% endif %}
+	<ul>
+      <li>
+       <!--<label for="userSigninLogin">{{ loginAttributeLabel }}</label>-->
+        <input
+            name="login"
+            type="text"
+            class="form-control"
+            id="userSigninLogin"
+            placeholder="{{ 'Email'|_ }}" />
+    </li>
+
+    <li>
+        <input
+            name="password"
+            type="password"
+            class="form-control"
+            id="userSigninPassword"
+            placeholder="{{ 'Mot de passe'|_ }}" />
+    </li>
+
+    <li><input type="submit" class="btn btn-default" value="{{ 'connexion'|_ }}"></li>
+	</li>
+</form>

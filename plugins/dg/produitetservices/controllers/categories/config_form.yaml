@@ -1,0 +1,10 @@
+name: Categories
+modelClass: dg\ProduitEtServices\Models\Categories
+form: $/dg/produitetservices/models/categories/fields.yaml
+defaultRedirect: dg/produitetservices/categories
+create:
+    redirect: 'dg/produitetservices/categories/update/:id'
+    redirectClose: dg/produitetservices/categories
+update:
+    redirect: dg/produitetservices/categories
+    redirectClose: dg/produitetservices/categories

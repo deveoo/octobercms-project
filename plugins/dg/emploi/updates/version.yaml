@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table dg_emploi_offres'
+    - builder_table_create_dg_emploi_offres.php
+1.0.3:
+    - 'Updated table dg_emploi_offres'
+    - builder_table_update_dg_emploi_offres.php

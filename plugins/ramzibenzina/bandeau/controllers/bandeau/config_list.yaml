@@ -1,0 +1,12 @@
+list: $/ramzibenzina/bandeau/models/bandeau/columns.yaml
+modelClass: RamziBenzina\Bandeau\Models\Bandeau
+title: Bandeau
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'ramzibenzina/bandeau/bandeau/update/:id'

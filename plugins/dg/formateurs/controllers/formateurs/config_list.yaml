@@ -1,0 +1,12 @@
+title: Formateurs
+modelClass: dg\Formateurs\Models\Formateur
+list: $/dg/formateurs/models/formateur/columns.yaml
+recordUrl: 'dg/formateurs/formateurs/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

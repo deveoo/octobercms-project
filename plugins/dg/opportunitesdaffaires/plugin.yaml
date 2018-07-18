@@ -1,0 +1,20 @@
+plugin:
+    name: 'dg.opportunitesdaffaires::lang.plugin.name'
+    description: 'dg.opportunitesdaffaires::lang.plugin.description'
+    author: 'Ramzi Benzina'
+    icon: oc-icon-area-chart
+    homepage: ''
+permissions:
+    liste:
+        tab: 'Liste des opportunités'
+        label: 'Liste des opportunités'
+navigation:
+    opportunites:
+        label: 'dg.opportunitesdaffaires::lang.plugin.name'
+        url: dg/opportunitesdaffaires/listeaffaires
+        icon: icon-bar-chart
+        sideMenu:
+            side-menu-item:
+                label: 'dg.opportunitesdaffaires::lang.plugin.name'
+                url: /
+                icon: icon-renren

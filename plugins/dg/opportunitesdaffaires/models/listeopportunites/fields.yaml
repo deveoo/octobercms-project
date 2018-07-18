@@ -1,0 +1,28 @@
+fields:
+    titre:
+        label: Titre
+        span: auto
+        required: 1
+        type: text
+    slug:
+        label: URL
+        span: auto
+        required: 1
+        preset:
+            field: titre
+            type: slug
+        type: text
+    extrait:
+        label: Extrait
+        size: small
+        span: full
+        type: textarea
+    pays:
+        label: Pays
+        span: full
+        type: text
+    description:
+        label: 'dg.opportunitesdaffaires::lang.plugin.description'
+        span: full
+        size: ''
+        type: richeditor

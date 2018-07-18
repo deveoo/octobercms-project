@@ -1,0 +1,20 @@
+plugin:
+    name: 'dg.fournisseurs::lang.plugin.name'
+    description: 'dg.fournisseurs::lang.plugin.description'
+    author: 'Ramzi Benzina'
+    icon: oc-icon-suitcase
+    homepage: ''
+permissions:
+    fournisseur:
+        tab: Fournisseur
+        label: Fournisseur
+navigation:
+    fournisseur:
+        label: Fournisseurs
+        url: /dg/fournisseurs/suppliers
+        icon: icon-suitcase
+        sideMenu:
+            fournisseur:
+                label: Fournisseurs
+                url: /dg/fournisseurs/suppliers
+                icon: icon-suitcase

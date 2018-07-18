@@ -1,0 +1,10 @@
+name: Produits
+form: $/dg/produitetservices/models/produits/fields.yaml
+modelClass: dg\ProduitEtServices\Models\Produits
+defaultRedirect: dg/produitetservices/produits
+create:
+    redirect: 'dg/produitetservices/produits/update/:id'
+    redirectClose: dg/produitetservices/produits
+update:
+    redirect: dg/produitetservices/produits
+    redirectClose: dg/produitetservices/produits

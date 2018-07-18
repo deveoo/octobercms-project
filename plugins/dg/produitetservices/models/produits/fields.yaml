@@ -1,0 +1,56 @@
+fields:
+    titre:
+        label: Titre
+        span: auto
+        required: 1
+        type: text
+    slug:
+        label: URL
+        span: auto
+        preset:
+            field: titre
+            type: slug
+        type: text
+    titre_additionnel:
+        label: 'Titre 2'
+        span: auto
+        type: text
+    extrait:
+        label: Extrait
+        size: ''
+        span: auto
+        type: textarea
+    description:
+        label: Description
+        size: ''
+        span: auto
+        type: richeditor
+    description_additionnel:
+        label: 'Description 2'
+        size: ''
+        span: auto
+        type: richeditor
+    image:
+        label: Image
+        mode: image
+        fileTypes: 'jpg,png,gif, jpeg'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        required: 1
+        type: fileupload
+    categorie:
+        label: Catégories
+        nameFrom: titre
+        descriptionFrom: description
+        span: auto
+        required: 1
+        type: relation
+    fournisseurs:
+        label: Founisseurs
+        span: auto
+        nameFrom: titre
+        descriptionFrom: description
+        type: relation

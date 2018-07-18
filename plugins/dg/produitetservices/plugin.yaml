@@ -1,0 +1,24 @@
+plugin:
+    name: 'dg.produitetservices::lang.plugin.name'
+    description: 'dg.produitetservices::lang.plugin.description'
+    author: 'Ramzi Benzina'
+    icon: oc-icon-video-camera
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'dg.produitetservices::lang.plugin.name'
+        url: /dg/produitetservices/produits
+        icon: icon-shopping-cart
+        sideMenu:
+            produits-services:
+                label: 'Produits et services'
+                url: /dg/produitetservices/produits/
+                icon: icon-shopping-cart
+            Catégories:
+                label: Catégories
+                url: /dg/produitetservices/categories
+                icon: icon-sitemap
+permissions:
+    Produit:
+        tab: 'dg.produitetservices::lang.plugin.name'
+        label: 'Produit et services'

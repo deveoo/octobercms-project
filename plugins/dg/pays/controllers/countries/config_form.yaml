@@ -1,0 +1,10 @@
+name: Countries
+form: $/dg/pays/models/countries/fields.yaml
+modelClass: dg\Pays\Models\Countries
+defaultRedirect: dg/pays/countries
+create:
+    redirect: 'dg/pays/countries/update/:id'
+    redirectClose: dg/pays/countries
+update:
+    redirect: dg/pays/countries
+    redirectClose: dg/pays/countries

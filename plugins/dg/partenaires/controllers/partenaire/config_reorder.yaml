@@ -1,0 +1,4 @@
+title: Partenaire
+modelClass: dg\Partenaires\Models\Partenaires
+toolbar:
+    buttons: reorder_toolbar

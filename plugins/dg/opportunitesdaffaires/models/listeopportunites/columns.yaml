@@ -1,0 +1,25 @@
+columns:
+    titre:
+        label: Titre
+        type: text
+        searchable: true
+        invisible: true
+        sortable: true
+    extrait:
+        label: Extrait
+        type: text
+        searchable: true
+        invisible: true
+        sortable: true
+    pays:
+        label: Pays
+        type: text
+        searchable: true
+        invisible: true
+        sortable: true
+    created_at:
+        label: Date
+        type: text
+        searchable: true
+        invisible: true
+        sortable: true

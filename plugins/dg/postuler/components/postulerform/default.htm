@@ -1,0 +1,42 @@
+
+<form data-request="onSend">
+  {% if errors.all()  %}
+  <ul class="alert alert-danger">
+      {% for error in errors.all() %}
+          <li style="float:none;display:block">{{ error }}</li>
+      {% endfor %}
+  </ul>
+
+  {% endif %}
+  <ul>
+        <input name="offre" id="" type="hidden" value=""  />
+      <li>
+        <input name="nom" id="" type="text" value="" placeholder="{{ 'Nom & prénom'|_ }}" />
+        {% if errors.first('nom')  %}  <div class="alert alert-danger">{{ errors.first('nom') }}</div> {% endif %}
+      </li>
+      <li>
+        <input name="phone" id="" type="text" value="" placeholder="{{ 'Téléphone'|_ }}" />
+        {% if errors.first('phone')  %}   <div class="alert alert-danger">{{ errors.first('phone') }}</div> {% endif %}
+      </li>
+      <li>
+        <input name="email" id="" type="email" value="" placeholder="{{ 'E-mail'|_ }}" />
+        {% if errors.first('email')  %} <div class="alert alert-danger">{{ errors.first('email') }}</div>{% endif %}
+      </li>
+      <li>
+        <select name="pays">
+          <option value="">Pays</option>
+          <option value="algerie">Algérie</option>
+          <option value="maroc">Maroc</option>
+          <option value="tunisie">Tunisie</option>
+        </select>
+        {% if errors.first('email')  %} <div class="alert alert-danger">{{ errors.first('email') }}</div>{% endif %}
+      </li>
+      <li>
+      CV
+        <input name="cv" id="" type="file" />
+        {{ errors.first('cv') }}
+      </li>
+      <li><input type="submit" id="" class="gform_button button" value=" {{ 'Envoyer'|_ }}" tabindex="9" /></li>
+
+  </ul>
+</form>

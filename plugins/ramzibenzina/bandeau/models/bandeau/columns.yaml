@@ -1,0 +1,11 @@
+columns:
+    titre:
+        label: 'ramzibenzina.bandeau::lang.bandeau.titre'
+        type: text
+        searchable: true
+        sortable: true
+    description:
+        label: 'ramzibenzina.bandeau::lang.plugin.description'
+        type: text
+        searchable: true
+        sortable: true

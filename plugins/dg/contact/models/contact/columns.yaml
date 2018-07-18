@@ -1,0 +1,18 @@
+columns:
+    nom_prenom:
+        label: 'Nom et prénom'
+        type: text
+        searchable: true
+        sortable: false
+    telephone:
+        label: Téléphone
+        type: text
+        searchable: true
+    email:
+        label: Email
+        type: text
+        searchable: true
+    created_at:
+        label: Date
+        type: date
+        sortable: true

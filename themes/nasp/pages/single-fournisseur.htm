@@ -1,0 +1,41 @@
+title = "Détails fournisseur"
+url = "/details-fournisseur/:slug"
+layout = "interne"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[builderDetails]
+modelClass = "dg\Fournisseurs\Models\Suppliers"
+identifierValue = "slug"
+modelKeyColumn = "slug"
+displayColumn = "titre"
+notFoundMessage = "Record not found"
+
+[viewBag]
+localeUrl[en] = "/details-fournisseur"
+==
+
+<?
+  use dg\Fournisseurs\Models\Suppliers;
+
+  function onStart(){
+    $this['supplier'] = Suppliers::where('slug', '=', $this->param('slug'))->first();
+    //dd($this['supplier']);
+  }
+?>
+==
+<section>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+          <h1>{{supplier.titre}}</h1>
+          <img src="{{supplier.image.path}}" alt="{{supplier.titre}}">
+          {{supplier.description2|raw }}
+        </div>
+        <div class="col-md-6">
+          {{supplier.description1|raw }}
+        </div>
+    </div>
+  </div>
+</section>

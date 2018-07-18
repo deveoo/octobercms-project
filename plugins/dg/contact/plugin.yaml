@@ -1,0 +1,15 @@
+plugin:
+    name: 'dg.contact::lang.plugin.name'
+    description: 'dg.contact::lang.plugin.description'
+    author: 'Ramzi Benzina'
+    icon: oc-icon-envelope
+    homepage: ''
+permissions:
+    contact:
+        tab: Contact
+        label: Contact
+navigation:
+    Contact:
+        label: Contact
+        url: /dg/contact/contact
+        icon: icon-envelope-square

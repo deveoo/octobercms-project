@@ -1,0 +1,4 @@
+title: Produits
+modelClass: dg\ProduitEtServices\Models\Produits
+toolbar:
+    buttons: reorder_toolbar

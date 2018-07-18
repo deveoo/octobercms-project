@@ -1,0 +1,15 @@
+plugin:
+    name: 'dg.pays::lang.plugin.name'
+    description: 'dg.pays::lang.plugin.description'
+    author: 'Ramzi Benzina'
+    icon: oc-icon-map-marker
+    homepage: ''
+permissions:
+    countries:
+        tab: Pays
+        label: Pays
+navigation:
+    pays:
+        label: Pays
+        url: dg/pays/countries
+        icon: icon-map-marker

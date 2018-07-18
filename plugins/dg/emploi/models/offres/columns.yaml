@@ -1,0 +1,16 @@
+columns:
+    titre:
+        label: Titre
+        type: text
+        searchable: true
+        sortable: true
+    extrait:
+        label: Extrait
+        type: text
+        searchable: true
+        sortable: true
+    societe:
+        label: Société
+        type: text
+        searchable: true
+        sortable: true

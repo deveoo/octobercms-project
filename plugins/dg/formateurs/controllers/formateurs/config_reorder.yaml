@@ -1,0 +1,4 @@
+title: Formateurs
+modelClass: dg\Formateurs\Models\Formateur
+toolbar:
+    buttons: reorder_toolbar

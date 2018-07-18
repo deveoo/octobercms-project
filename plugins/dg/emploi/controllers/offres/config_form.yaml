@@ -1,0 +1,11 @@
+name: Offres
+modelClass: dg\Emploi\Models\Offres
+form: $/dg/emploi/models/offres/fields.yaml
+defaultRedirect: dg/emploi/offres
+create:
+    redirect: 'dg/emploi/offres/update/:id'
+    redirectClose: dg/emploi/offres
+update:
+    redirect: dg/emploi/offres
+    redirectClose: dg/emploi/offres
+preview: {  }

@@ -1,0 +1,102 @@
+title = "Espace B2B"
+url = "/login"
+layout = "interne"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeUrl[en] = "/login"
+
+[account]
+redirect = "tableau-de-bord-fournisseur"
+paramCode = "code"
+forceSecure = 0
+==
+<div>
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+         <!-- <h2>{{ 'Login'|_ }}&nbsp;</h2>-->
+          <div class="websiteForm">
+              {% if not user %}
+
+                    <div class="col-md-6">
+                        <div class="websiteForm">
+                            <h3>{{ 'connexion'|_ }}</h3>
+                            {% partial 'account/signin' %}
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="websiteForm">
+                            <h3>{{ 'Inscription'|_ }}</h3>
+                            {% partial 'account/register' %}
+                        </div>
+                    </div>
+
+                {% else %}
+
+                    {% set params = params|merge({'redirect_uri': '/tableau-de-bord'}) %}
+
+                {% endif %}
+
+
+                                    <!--{% partial account ~ '::activation_check' %}
+
+                                    {% partial account ~ '::update' %}
+
+                                    {% partial account ~ '::deactivate_link' %}-->
+
+            <!--<form data-request="onSend">
+              <ul>
+                <li>
+                  <input name="email" type="email" value="" placeholder="{{ 'E-mail'|_ }}">
+                </li>
+                <li>
+                  <input name="password" type="password" value="" placeholder="{{ 'mot de passe'|_ }}">
+                </li>
+                <li><input type="submit" id="gform_submit_button_1" class="gform_button button" value="{{ 'Connexion'|_ }}" tabindex="9"></li>
+                <li><a href="{{'user-reset-password' | page}}" title="{{ 'Mot de passe oublié?'|_ }}">{{ 'Mot de passe oublié?'|_ }}</a></li>
+            </ul>
+          </form>-->
+          </div>
+        </div>
+        <!--<div class="col-md-6">
+          <h2>{{ 'Enregistrement'|_ }}</h2>
+          <div class="websiteForm">
+            <form data-request="onSend">
+              <ul>
+                <li>
+                  <input name="nom" type="text" value="" placeholder="{{ 'Nom & prénom'|_ }}">
+                </li>
+
+                <li>
+                  <input name="pays" type="text" value="" placeholder="{{ 'Pays'|_ }}">
+                </li>
+
+                <li>
+                  <input name="societe" type="text" value="" placeholder="{{ 'Societé'|_ }}">
+                </li>
+
+                <li>
+                  <input name="secteur" type="text" value="" placeholder="{{ 'Secteur d\'activité'|_ }}">
+                </li>
+
+                <h3>{{ 'Paramètres de connexion'|_ }}</h3>
+                <li>
+                  <input name="email" type="email" value="" placeholder="{{ 'E-mail'|_ }}">
+                </li>
+                <li>
+                  <input name="password" type="password" value="" placeholder="{{ 'mot de passe'|_ }}">
+                </li>
+                <li><input type="submit" id="gform_submit_button_1" class="gform_button button" value=" {{ 'Inscription'|_ }}" tabindex="9"></li>
+
+            </ul>
+          </form>
+          </div>
+        </div>-->
+      </div>
+  </div>
+</div>

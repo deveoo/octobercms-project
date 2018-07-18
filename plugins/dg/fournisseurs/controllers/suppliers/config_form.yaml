@@ -1,0 +1,11 @@
+name: Suppliers
+modelClass: dg\Fournisseurs\Models\Suppliers
+form: $/dg/fournisseurs/models/suppliers/fields.yaml
+defaultRedirect: dg/fournisseurs/suppliers
+create:
+    redirect: 'dg/fournisseurs/suppliers/update/:id'
+    redirectClose: dg/fournisseurs/suppliers
+update:
+    redirect: dg/fournisseurs/suppliers
+    redirectClose: dg/fournisseurs/suppliers
+preview: {  }

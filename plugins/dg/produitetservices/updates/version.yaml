@@ -1,0 +1,32 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table dg_produitetservices_produits'
+    - builder_table_create_dg_produitetservices_produits.php
+1.0.3:
+    - 'Created table dg_produitetservices_categories'
+    - builder_table_create_dg_produitetservices_categories.php
+1.0.4:
+    - 'Updated table dg_produitetservices_categories'
+    - builder_table_update_dg_produitetservices_categories.php
+1.0.5:
+    - 'Created table dg_produitetservices_produit_categorie'
+    - builder_table_create_dg_produitetservices_produit_categorie.php
+1.0.6:
+    - 'Created table dg_produitetservices_produit_fournisseur'
+    - builder_table_create_dg_produitetservices_produit_fournisseur.php
+1.0.7:
+    - 'Updated table dg_produitetservices_produit_fournisseur'
+    - builder_table_update_dg_produitetservices_produit_fournisseur.php
+1.0.8:
+    - 'Updated table dg_produitetservices_produit_fournisseur'
+    - builder_table_update_dg_produitetservices_produit_fournisseur_2.php
+1.0.9:
+    - 'Updated table dg_produitetservices_produit_categorie'
+    - builder_table_update_dg_produitetservices_prod_cat.php
+1.0.10:
+    - 'Updated table dg_produitetservices_produit_fournisseur'
+    - builder_table_update_dg_produitetservices_produit_fournisseur_3.php
+1.0.11:
+    - 'Updated table dg_produitetservices_produit_fournisseur'
+    - builder_table_update_dg_produitetservices_produit_fournisseur_4.php

@@ -1,0 +1,27 @@
+columns:
+    titre:
+        label: Titre
+        type: text
+        searchable: true
+        invisible: false
+        sortable: true
+    email:
+        label: Email
+        type: text
+        searchable: true
+        invisible: false
+        sortable: true
+    poste:
+        label: Poste
+        type: text
+        searchable: true
+        invisible: false
+        sortable: true
+    tel:
+        label: Téléphone
+        type: text
+        searchable: true
+    pays:
+        label: Pays
+        type: text
+        searchable: true

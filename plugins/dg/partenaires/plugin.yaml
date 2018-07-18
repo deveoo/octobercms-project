@@ -1,0 +1,24 @@
+plugin:
+    name: 'dg.partenaires::lang.plugin.name'
+    description: 'dg.partenaires::lang.plugin.description'
+    author: 'Ramzi Benzina'
+    icon: oc-icon-suitcase
+    homepage: ''
+navigation:
+    paretenaires:
+        label: Partenaires
+        url: dg/partenaires/partenaire
+        icon: icon-suitcase
+        permissions:
+            - dg.partenaire.gerer_partenaire
+        sideMenu:
+            partenaire:
+                label: Partenaires
+                url: dg/partenaires/partenaire
+                icon: icon-suitcase
+                permissions:
+                    - dg.partenaire.gerer_partenaire
+permissions:
+    dg.partenaire.gerer_partenaire:
+        tab: 'dg.partenaires::lang.dg.partenaires::lang.partenaires.nom'
+        label: ':lang.partenaires.gerer_partenaires'

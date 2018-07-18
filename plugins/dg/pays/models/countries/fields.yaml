@@ -1,0 +1,19 @@
+fields:
+    titre:
+        label: Nom
+        span: auto
+        required: 1
+        type: text
+    slug:
+        label: URL
+        span: auto
+        required: 1
+        preset:
+            field: titre
+            type: slug
+        type: text
+    description:
+        label: Description
+        size: ''
+        span: full
+        type: richeditor

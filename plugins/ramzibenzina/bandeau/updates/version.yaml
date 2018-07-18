@@ -1,0 +1,11 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table ramzibenzina_bandeau_images'
+    - builder_table_create_ramzibenzina_bandeau_images.php
+1.0.3:
+    - 'Created table ramzibenzina_bandeau_images'
+    - builder_table_create_ramzibenzina_bandeau_images_2.php
+1.0.4:
+    - 'Updated table ramzibenzina_bandeau_images'
+    - builder_table_update_ramzibenzina_bandeau_images.php

@@ -1,0 +1,6 @@
+plugin:
+    name: 'dg.postuler::lang.plugin.name'
+    description: 'dg.postuler::lang.plugin.description'
+    author: 'Ramzi Benzina'
+    icon: oc-icon-align-justify
+    homepage: ''

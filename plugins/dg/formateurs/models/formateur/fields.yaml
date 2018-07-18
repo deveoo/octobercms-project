@@ -1,0 +1,85 @@
+fields:
+    titre:
+        label: Titre
+        span: auto
+        required: 1
+        type: text
+    slug:
+        label: URL
+        span: auto
+        required: 1
+        preset:
+            field: titre
+            type: slug
+        type: text
+    nom_prenom:
+        label: 'Nom & Prénom'
+        span: auto
+        required: 1
+        type: text
+    email:
+        label: Email
+        span: auto
+        required: 1
+        type: text
+    tel:
+        label: Téléphone
+        span: auto
+        required: 1
+        type: text
+    pays:
+        label: Pays
+        span: auto
+        type: text
+    section1:
+        label: 'Informations professionnels'
+        span: full
+        type: section
+    linkedin_viadeo:
+        label: 'Profil Linkedin/viadeo'
+        span: auto
+        type: text
+    youtube_siteperso:
+        label: 'Autre lien (youtube, site perso ...)'
+        span: auto
+        type: text
+    poste:
+        label: Poste
+        span: auto
+        type: text
+    cv:
+        label: CV
+        mode: file
+        fileTypes: 'pdf, doc, docx'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    formateur_consultant:
+        label: 'Type de profil'
+        span: auto
+        attributes:
+            formateur: Formateur
+            consultant: Consultant
+        type: dropdown
+    image:
+        label: Photo
+        mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        fileTypes: 'jpg,png,gif,jpeg'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        hidden: 0
+        required: 0
+        type: fileupload
+    description:
+        label: Description
+        size: ''
+        span: full
+        type: richeditor

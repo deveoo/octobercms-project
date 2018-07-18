@@ -1,0 +1,24 @@
+columns:
+    titre:
+        label: Titre
+        type: text
+        searchable: true
+        sortable: true
+    extrait:
+        label: Extrait
+        type: text
+        searchable: true
+        sortable: true
+    created_at:
+        label: Date
+        type: date
+        sortable: true
+    pays:
+        label: Pays
+        type: text
+        searchable: true
+        sortable: true
+    activated:
+        label: 'Activé?'
+        type: switch
+        sortable: true

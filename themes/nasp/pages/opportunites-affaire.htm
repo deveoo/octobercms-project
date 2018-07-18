@@ -1,0 +1,47 @@
+title = "Opportunités d'affaire"
+url = "/opportunites-affaire"
+layout = "interne"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeUrl[en] = "/opportunites-daffaire"
+==
+<?php
+use Dg\OpportunitesDAffaires\Models\ListeOpportunites;
+function onStart(){
+    
+$this['offres'] = ListeOpportunites::get();
+$this['locale'] = App::getLocale();  
+$this['lien'] = 'detail-opportunite';
+if($this['locale'] == 'en') $this['lien'] = 'opportunity-details';
+
+}
+?>
+==
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p> </p>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">{{ 'Titre'|_ }}</th>
+			<th scope="col">Description</th>
+			<th scope="col">Pays</th>
+			<th scope="col">{{ 'Publication'|_ }}</th>
+			<!--<th scope="col">Détails</th>-->
+		</tr>
+	</thead>
+	<tbody>
+		{% for offre in offres %}
+			<tr>
+				<td>{{ offre.titre }}</td>
+				<td>{{ offre.extrait }}</td>
+				<td>{{ offre.pays }}</td>
+				<td>{{ offre.created_at|date("d-m-Y") }}</td>
+				<!--<td><a class="btn btn-primary" href="/nasp/superuser/{{lien}}/{{ offre.slug }}">Détails</a></td>-->
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>

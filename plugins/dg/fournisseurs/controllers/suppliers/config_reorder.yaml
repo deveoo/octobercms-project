@@ -1,0 +1,4 @@
+title: Suppliers
+modelClass: dg\Fournisseurs\Models\Suppliers
+toolbar:
+    buttons: reorder_toolbar

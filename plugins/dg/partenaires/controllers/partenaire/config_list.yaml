@@ -1,0 +1,13 @@
+title: Partenaire
+modelClass: dg\Partenaires\Models\Partenaires
+list: $/dg/partenaires/models/partenaires/columns.yaml
+recordUrl: 'dg/partenaires/partenaire/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    buttons: reorder_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

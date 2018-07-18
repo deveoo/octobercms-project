@@ -1,0 +1,4 @@
+title: ListeAffaires
+modelClass: dg\OpportunitesDAffaires\Models\ListeOpportunites
+toolbar:
+    buttons: reorder_toolbar

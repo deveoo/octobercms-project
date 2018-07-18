@@ -1,0 +1,35 @@
+fields:
+    titre:
+        label: 'ramzibenzina.bandeau::lang.bandeau.titre'
+        span: auto
+        required: 1
+        type: text
+    slug:
+        label: 'ramzibenzina.bandeau::lang.bandeau.url'
+        span: auto
+        preset:
+            field: titre
+            type: slug
+        type: text
+    description:
+        label: 'ramzibenzina.bandeau::lang.bandeau.description'
+        size: ''
+        span: auto
+        type: textarea
+    lien:
+        label: 'ramzibenzina.bandeau::lang.bandeau.lien'
+        span: auto
+        required: 1
+        type: text
+    image:
+        label: Image
+        span: auto
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        required: 1
+        imageWidth: '100'
+        imageHeight: '100'
+        type: fileupload

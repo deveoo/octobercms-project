@@ -1,0 +1,10 @@
+name: Partenaire
+modelClass: dg\Partenaires\Models\Partenaires
+form: $/dg/partenaires/models/partenaires/fields.yaml
+defaultRedirect: dg/partenaires/partenaire
+create:
+    redirect: 'dg/partenaires/partenaire/update/:id'
+    redirectClose: dg/partenaires/partenaire
+update:
+    redirect: dg/partenaires/partenaire
+    redirectClose: dg/partenaires/partenaire

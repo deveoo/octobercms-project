@@ -1,0 +1,10 @@
+name: Formateurs
+form: $/dg/formateurs/models/formateur/fields.yaml
+modelClass: dg\Formateurs\Models\Formateur
+defaultRedirect: dg/formateurs/formateurs
+create:
+    redirect: 'dg/formateurs/formateurs/update/:id'
+    redirectClose: dg/formateurs/formateurs
+update:
+    redirect: dg/formateurs/formateurs
+    redirectClose: dg/formateurs/formateurs

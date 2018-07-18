@@ -1,0 +1,16 @@
+plugin:
+    name: 'dg.formateurs::lang.plugin.name'
+    description: 'dg.formateurs::lang.plugin.description'
+    author: 'Ramzi Benzina'
+    icon: oc-icon-user-plus
+    homepage: ''
+navigation:
+    formateur:
+        label: 'Formateurs & Consultants'
+        url: dg/formateurs/formateurs
+        icon: icon-user-plus
+        sideMenu:
+            side-menu-item:
+                label: 'Formateurs & consultants'
+                url: /dg/formateurs/formateurs
+                icon: icon-align-justify
