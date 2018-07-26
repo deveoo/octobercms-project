@@ -39,3 +39,35 @@ localeUrl[en] = "/details-fournisseur"
     </div>
   </div>
 </section>
+
+<!-- ******************************************************************* -->
+<div class="Disponible">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="TitleDispo">{{'Produits'|_}}</div>
+          <div class="AllDispo">
+            <div id="owl-disponile">
+              {% for i in 0..10 %}
+              <div class="item">
+                <div class="ContDispo">
+                  <div class="ImgDispo">
+                    <img src="{{ '/assets/images/tus.jpg'|theme }}" alt="TUS Technology" class="img-responsive" />
+                  </div>
+                  <div class="descDispo">
+                    <h3>Nibh euismod tincidunt</h3>
+                    <div class="ExtraitDispo">
+                      Lorem ipsum dolor sit amet, consectetuer kjatdadipdescing elit
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- ******************************************************************* -->

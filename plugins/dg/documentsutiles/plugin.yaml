@@ -1,0 +1,20 @@
+plugin:
+    name: 'dg.documentsutiles::lang.plugin.name'
+    description: 'dg.documentsutiles::lang.plugin.description'
+    author: 'Ramzi Benzina'
+    icon: oc-icon-book
+    homepage: ''
+permissions:
+    documents:
+        tab: 'Documents Utiles'
+        label: 'Documents Utiles'
+navigation:
+    documents-utiles:
+        label: 'Documents utiles'
+        url: dg/documentsutiles/documents
+        icon: icon-book
+        sideMenu:
+            docs:
+                label: Documents
+                url: dg/documentsutiles/documents
+                icon: icon-bookmark

@@ -1,0 +1,25 @@
+fields:
+    titre:
+        label: Titre
+        span: auto
+        type: text
+    pays_id:
+        label: Pays
+        nameFrom: titre
+        descriptionFrom: description
+        span: auto
+        type: relation
+    description:
+        label: Description
+        size: ''
+        span: full
+        type: textarea
+    document:
+        label: Document
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

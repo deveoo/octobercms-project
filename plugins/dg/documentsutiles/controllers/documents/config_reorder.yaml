@@ -1,0 +1,4 @@
+title: Documents
+modelClass: dg\DocumentsUtiles\Models\Documents
+toolbar:
+    buttons: reorder_toolbar

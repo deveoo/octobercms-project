@@ -1,0 +1,10 @@
+name: Documents
+form: $/dg/documentsutiles/models/documents/fields.yaml
+modelClass: dg\DocumentsUtiles\Models\Documents
+defaultRedirect: dg/documentsutiles/documents
+create:
+    redirect: 'dg/documentsutiles/documents/update/:id'
+    redirectClose: dg/documentsutiles/documents
+update:
+    redirect: dg/documentsutiles/documents
+    redirectClose: dg/documentsutiles/documents
