@@ -21,3 +21,6 @@
 1.0.8:
     - 'Created table dg_formateurs_user_consulter'
     - builder_table_create_dg_formateurs_user_consulter.php
+1.0.9:
+    - 'Updated table dg_formateurs_liste'
+    - builder_table_update_dg_formateurs_liste_4.php
