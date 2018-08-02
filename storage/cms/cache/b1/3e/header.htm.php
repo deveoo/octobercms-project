@@ -1,5 +1,5 @@
 <?php 
-class Cms5b62c75b40c70124851755_0aa5611669cde28faebfa030bfb81e4dClass extends Cms\Classes\PartialCode
+class Cms5b6317d472895357072108_70e13a2921d68b53687dd524eea6b12cClass extends Cms\Classes\PartialCode
 {
 public function onStart(){
         $this->locale = App::getLocale();

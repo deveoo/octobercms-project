@@ -1,4 +1,4 @@
-1533206697a:1:{s:22:"single-fournisseur.htm";a:13:{s:8:"fileName";s:22:"single-fournisseur.htm";s:7:"content";s:2125:"title = "Détails fournisseur"
+1533221419a:1:{s:22:"single-fournisseur.htm";a:13:{s:8:"fileName";s:22:"single-fournisseur.htm";s:7:"content";s:2125:"title = "Détails fournisseur"
 url = "/details-fournisseur/:slug"
 layout = "interne"
 is_hidden = 0

@@ -1,5 +1,5 @@
 <?php 
-use Dg\OpportunitesDAffaires\Models\ListeOpportunites;class Cms5b62c7fd2261e027619301_71f3cdb523c7938c712b8868de9a77d5Class extends Cms\Classes\PageCode
+use Dg\OpportunitesDAffaires\Models\ListeOpportunites;class Cms5b6318a871ca5514596243_3ce4adc3743ccad6e4657a0b512130d7Class extends Cms\Classes\PageCode
 {
 
 public function onStart(){

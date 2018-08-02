@@ -1,4 +1,4 @@
-1533206698a:1:{s:15:"site/footer.htm";a:6:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:3149:"[contactform]
+1533221420a:1:{s:15:"site/footer.htm";a:6:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:3149:"[contactform]
 ==
 <?php
 use Dg\Partenaires\Models\Partenaires;

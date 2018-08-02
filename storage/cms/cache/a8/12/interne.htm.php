@@ -1,5 +1,5 @@
 <?php 
-class Cms5b62c7fd20b33424853865_8cc1ce0cf3b2cf3ff417e4f28d3f2d2bClass extends Cms\Classes\LayoutCode
+class Cms5b6317ef01653603460512_f27045a4c567111db9fb2600e65fc3e0Class extends Cms\Classes\LayoutCode
 {
 public function onStart(){
 		$this->locale = App::getLocale();

@@ -30,3 +30,6 @@
 1.0.11:
     - 'Updated table dg_produitetservices_produit_fournisseur'
     - builder_table_update_dg_produitetservices_produit_fournisseur_4.php
+1.0.12:
+    - 'Updated table dg_produitetservices_produits'
+    - builder_table_update_dg_produitetservices_produits.php

@@ -50,7 +50,43 @@ fields:
         type: relation
     fournisseurs:
         label: Founisseurs
-        span: auto
         nameFrom: titre
         descriptionFrom: description
+        span: auto
         type: relation
+    reference:
+        label: Reference
+        span: auto
+        type: text
+tabs:
+    fields:
+        analogue_ip:
+            label: 'Analogique /IP (AN /IP)'
+            span: auto
+            type: text
+            tab: Cameras
+        objective:
+            label: Objective
+            span: auto
+            type: text
+            tab: Cameras
+        resolution:
+            label: Resolution
+            span: auto
+            type: text
+            tab: Cameras
+        noise:
+            label: 'Réduction numérique du bruit'
+            span: auto
+            type: text
+            tab: Cameras
+        norm:
+            label: Norme
+            span: auto
+            type: text
+            tab: Cameras
+        brand:
+            label: Marque
+            span: auto
+            type: text
+            tab: Cameras
