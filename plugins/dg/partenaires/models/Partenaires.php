@@ -22,7 +22,7 @@ class Partenaires extends Model
 
     /* Relations */
     public $attachOne = [
-        'logo' => 'System\Models\file'
+        'logo' => 'System\Models\File'
     ];
 
     public function reorderExtendQuery($query)

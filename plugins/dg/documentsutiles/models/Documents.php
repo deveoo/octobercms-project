@@ -11,6 +11,7 @@ class Documents extends Model
 
     use \October\Rain\Database\Traits\SoftDelete;
 
+
     protected $dates = ['deleted_at'];
 
     /**
@@ -34,14 +35,17 @@ class Documents extends Model
           'Categories' => ['dg\ProduitEtServices\Models\Categories', 'key' => 'titre'] ,
       ];*/
 
-     public $hasOne = [
+      public $hasOne = [
+          'pays' => ['dg\Pays\Models\Countries', 'key' => 'id'] ,
+      ];
+    /* public $hasOne = [
        'pays_id' => [
            'dg\Pays\Models\Countries',
            'table' => 'dg_pays_countries',
            'order' => 'titre',
-           'key' => 'titre'
+           'key' => 'id'
        ],
-    ];
+    ];*/
 
      public $attachOne = [
          'document' => 'System\Models\File',

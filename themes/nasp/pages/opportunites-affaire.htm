@@ -8,12 +8,12 @@ robot_follow = "follow"
 [viewBag]
 localeUrl[en] = "/opportunites-daffaire"
 ==
-<?php
+<?
 use Dg\OpportunitesDAffaires\Models\ListeOpportunites;
 function onStart(){
-    
+
 $this['offres'] = ListeOpportunites::get();
-$this['locale'] = App::getLocale();  
+$this['locale'] = App::getLocale();
 $this['lien'] = 'detail-opportunite';
 if($this['locale'] == 'en') $this['lien'] = 'opportunity-details';
 
@@ -28,7 +28,7 @@ if($this['locale'] == 'en') $this['lien'] = 'opportunity-details';
 		<tr>
 			<th scope="col">{{ 'Titre'|_ }}</th>
 			<th scope="col">Description</th>
-			<th scope="col">Pays</th>
+			<th scope="col">{{ 'Pays'|_ }}</th>
 			<th scope="col">{{ 'Publication'|_ }}</th>
 			<!--<th scope="col">Détails</th>-->
 		</tr>

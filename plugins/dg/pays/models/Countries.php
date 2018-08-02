@@ -28,4 +28,11 @@ class Countries extends Model
 
     public $translatable = ['titre', 'description', 'slug' ];
 
+    /**
+    * Relations
+    **/
+    public $attachOne = [
+        'image' => 'System\Models\File'
+    ];
+
 }

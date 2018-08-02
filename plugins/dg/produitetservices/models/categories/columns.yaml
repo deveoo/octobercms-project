@@ -15,7 +15,10 @@ columns:
         searchable: true
         sortable: true
     created_at:
-        label: Date de création
+        label: 'Date de création'
         type: text
         searchable: false
         sortable: true
+    id_parent:
+        label: Parent
+        type: text

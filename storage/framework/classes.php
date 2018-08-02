@@ -243,4 +243,5 @@
   'dg\\documentsutiles\\Plugin' => 'plugins\\dg\\documentsutiles\\Plugin.php',
   'dg\\documentsutiles\\Controllers\\documents' => 'plugins\\dg\\documentsutiles\\controllers\\documents.php',
   'dg\\DocumentsUtiles\\Models\\Documents' => 'plugins\\dg\\documentsutiles\\models\\Documents.php',
+  'Dg\\Documentsutiles\\Models\\Documents' => 'plugins\\dg\\documentsutiles\\models\\Documents.php',
 );

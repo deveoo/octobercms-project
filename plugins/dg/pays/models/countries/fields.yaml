@@ -17,3 +17,12 @@ fields:
         size: ''
         span: full
         type: richeditor
+    image:
+        label: Image
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

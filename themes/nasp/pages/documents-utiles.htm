@@ -8,14 +8,40 @@ robot_follow = "follow"
 [viewBag]
 localeUrl[en] = "/documents-utiles"
 ==
-<p>Lorem ipsum dolor sit amet, consectetuer kjatdadipdescing elit, sed diadesem nonummy nibh euismod tincidunt ut laoreet doloLorem ipsum dolor sit amet.
-Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.re magna al habent claritatem insitam.
-Typi non habent claritatem insitam...</p>
+<?
+use Dg\Documentsutiles\Models\Documents;
+use Dg\Pays\Models\Pays;
+function onStart(){
 
-<p>Lorem ipsum dolor sit amet, consectetuer kjatdadipdescing elit, sed diadesem nonummy nibh euismod tincidunt ut laoreet doloLorem ipsum dolor sit amet.
-Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.re magna al habent claritatem insitam.
-Typi non habent claritatem insitam...</p>
+  $this['offres'] = Documents::get();
+  ///dd($this['offres'] );
+}
+?>
+==
 
-<p>Lorem ipsum dolor sit amet, consectetuer kjatdadipdescing elit, sed diadesem nonummy nibh euismod tincidunt ut laoreet doloLorem ipsum dolor sit amet.
-Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.re magna al habent claritatem insitam.
-Typi non habent claritatem insitam...</p>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">{{ 'Titre'|_ }}</th>
+			<th scope="col">Description</th>
+			<th scope="col">{{ 'Pays'|_ }}</th>
+			<th scope="col">{{ 'Télécharger'|_ }}</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for offre in offres %}
+			<tr>
+				<td>{{ offre.titre }}</td>
+				<td>
+            {% if offre.description != '' %}
+              {{ offre.description }}
+            {% else %}
+            -
+            {% endif %}
+        </td>
+				<td><img src="{{ offre.pays.image.path }}" width="20"> {{ offre.pays.titre }}</td>
+				<td><a href="{{ offre.document.path }}" target="_blank" style="color: #fff; background:#0e73c0; padding: 5px 10px;"><i class=" fa fa-download"></i> {{ 'Télécharger'|_ }} </a> </td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>

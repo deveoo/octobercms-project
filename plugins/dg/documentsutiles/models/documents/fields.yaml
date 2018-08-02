@@ -3,7 +3,7 @@ fields:
         label: Titre
         span: auto
         type: text
-    pays_id:
+    pays:
         label: Pays
         nameFrom: titre
         descriptionFrom: description
