@@ -244,4 +244,7 @@
   'dg\\documentsutiles\\Controllers\\documents' => 'plugins\\dg\\documentsutiles\\controllers\\documents.php',
   'dg\\DocumentsUtiles\\Models\\Documents' => 'plugins\\dg\\documentsutiles\\models\\Documents.php',
   'Dg\\Documentsutiles\\Models\\Documents' => 'plugins\\dg\\documentsutiles\\models\\Documents.php',
+  'dg\\Produitetservices\\Models\\Produits' => 'plugins\\dg\\produitetservices\\models\\Produits.php',
+  'rainlab\\googleanalytics\\Plugin' => 'plugins\\rainlab\\googleanalytics\\Plugin.php',
+  'RainLab\\GoogleAnalytics\\Components\\Tracker' => 'plugins\\rainlab\\googleanalytics\\components\\Tracker.php',
 );

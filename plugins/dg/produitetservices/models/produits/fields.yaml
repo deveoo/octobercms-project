@@ -1,4 +1,8 @@
 fields:
+    reference:
+        label: Reference
+        span: full
+        type: text
     titre:
         label: Titre
         span: auto
@@ -54,10 +58,6 @@ fields:
         descriptionFrom: description
         span: auto
         type: relation
-    reference:
-        label: Reference
-        span: auto
-        type: text
 tabs:
     fields:
         analogue_ip:

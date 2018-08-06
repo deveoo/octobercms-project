@@ -9,12 +9,20 @@ robot_follow = "follow"
 [viewBag]
 localeUrl[en] = "/produits-et-services"
 ==
+<?
+  use dg\Produitetservices\Models\Produits;
+
+  function onStart(){
+    $this['products'] = Produits::get();
+  }
+?>
+==
 
 <section id="breadcrumbs">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <a href="" title="">Accueil</a> > <span>Produits et services</span>
+                <a href="" title="">{{ 'Accueil'|_ }}</a> > <span>{{ 'Produits et services'|_ }}</span>
             </div>
         </div>
     </div>
@@ -24,8 +32,10 @@ localeUrl[en] = "/produits-et-services"
         <div class="row">
             <div class="col-xs-12">
                 <article class="clearfix">
+
+                  <!----------------------------------- fILTER BEGIN -------------------------------------------->
                     <div class="Filter">
-                        <span class="titleFilter">Filtrer par</span>
+                        <span class="titleFilter">{{ 'Filtrer par'|_ }} </span>
                         <select>
                             <option value="menu_order" selected="selected">Produits</option>
                             <option value="popularity">Produits 1</option>
@@ -46,119 +56,32 @@ localeUrl[en] = "/produits-et-services"
                         </select>
                         <input type="submit" value="OK">
                     </div>
+                  <!------------------------------------ filer End ------------------------------------------->
+                  
                     <div class="BloxProducts clearfix">
+
+                      {% for product in products %}
                         <div class="BlocProduct">
                             <div class="imgProduct">
-                                <a href="#" title="Product">
+                                <a href="details-produit/{{product.slug}}" title="{{product.titre}}">
                                     <img src="{{ 'assets/images/product1.jpg'|theme }}" alt="Product" class="img-responsive" />
                                 </a>
                             </div>
                             <div class="infoProduct">
-                                <h3><a href="#" title="Nibh euismod tincidunt">Nibh euismod tincidunt</a></h3>
+                                <h3><a href="#" title="Nibh euismod tincidunt">{{product.titre}}</a></h3>
                                 <div class="ExtraitProduct">
-                                    Lorem ipsum dolor sit amet, consectetuer kjatdadipdescing elit
+                                    {{product.titre}}
                                 </div>
                             </div>
-                            <a class="LoopProduct" href="#" title="Produit"></a>
-                        </div>
-                        <div class="BlocProduct">
-                            <div class="imgProduct">
-                                <a href="#" title="Product">
-                                    <img src="{{ 'assets/images/product3.jpg'|theme }}" alt="Product" class="img-responsive" />
-                                </a>
-                            </div>
-                            <div class="infoProduct">
-                                <h3><a href="#" title="Nibh euismod tincidunt">Nibh euismod tincidunt</a></h3>
-                                <div class="ExtraitProduct">
-                                    Lorem ipsum dolor sit amet, consectetuer kjatdadipdescing elit
-                                </div>
-                            </div>
-                            <a class="LoopProduct" href="#" title="Produit"></a>
-                        </div>
-                        <div class="BlocProduct">
-                            <div class="imgProduct">
-                                <a href="#" title="Product">
-                                    <img src="{{ 'assets/images/product1.jpg'|theme }}" alt="Product" class="img-responsive" />
-                                </a>
-                            </div>
-                            <div class="infoProduct">
-                                <h3><a href="#" title="Nibh euismod tincidunt">Nibh euismod tincidunt</a></h3>
-                                <div class="ExtraitProduct">
-                                    Lorem ipsum dolor sit amet, consectetuer kjatdadipdescing elit
-                                </div>
-                            </div>
-                            <a class="LoopProduct" href="#" title="Produit"></a>
-                        </div>
-                        <div class="BlocProduct">
-                            <div class="imgProduct">
-                                <a href="#" title="Product">
-                                    <img src="{{ 'assets/images/product3.jpg'|theme }}" alt="Product" class="img-responsive" />
-                                </a>
-                            </div>
-                            <div class="infoProduct">
-                                <h3><a href="#" title="Nibh euismod tincidunt">Nibh euismod tincidunt</a></h3>
-                                <div class="ExtraitProduct">
-                                    Lorem ipsum dolor sit amet, consectetuer kjatdadipdescing elit
-                                </div>
-                            </div>
-                            <a class="LoopProduct" href="#" title="Produit"></a>
-                        </div>
-                        <div class="BlocProduct">
-                            <div class="imgProduct">
-                                <a href="#" title="Product">
-                                    <img src="{{ 'assets/images/product2.jpg'|theme }}" alt="Product" class="img-responsive" />
-                                </a>
-                            </div>
-                            <div class="infoProduct">
-                                <h3><a href="#" title="Nibh euismod tincidunt">Nibh euismod tincidunt</a></h3>
-                                <div class="ExtraitProduct">
-                                    Lorem ipsum dolor sit amet, consectetuer kjatdadipdescing elit 
-                                </div>
-                            </div>
-                            <a class="LoopProduct" href="#" title="Produit"></a>
-                        </div>
-                        <div class="BlocProduct">
-                            <div class="imgProduct">
-                                <a href="#" title="Product">
-                                    <img src="{{ 'assets/images/product4.jpg'|theme }}" alt="Product" class="img-responsive" />
-                                </a>
-                            </div>
-                            <div class="infoProduct">
-                                <h3><a href="#" title="Nibh euismod tincidunt">Nibh euismod tincidunt</a></h3>
-                                <div class="ExtraitProduct">
-                                    Lorem ipsum dolor sit amet, consectetuer kjatdadipdescing elit 
-                                </div>
-                            </div>
-                            <a class="LoopProduct" href="#" title="Produit"></a>
-                        </div>
-                        <div class="BlocProduct">
-                            <div class="imgProduct">
-                                <a href="#" title="Product">
-                                    <img src="{{ 'assets/images/product2.jpg'|theme }}" alt="Product" class="img-responsive" />
-                                </a>
-                            </div>
-                            <div class="infoProduct">
-                                <h3><a href="#" title="Nibh euismod tincidunt">Nibh euismod tincidunt</a></h3>
-                                <div class="ExtraitProduct">
-                                    Lorem ipsum dolor sit amet, consectetuer kjatdadipdescing elit
-                                </div>
-                            </div>
-                            <a class="LoopProduct" href="#" title="Produit"></a>
-                        </div>
-                        <div class="BlocProduct">
-                            <div class="imgProduct">
-                                <a href="#" title="Product">
-                                    <img src="{{ 'assets/images/product4.jpg'|theme }}" alt="Product" class="img-responsive" />
-                                </a>
-                            </div>
-                            <div class="infoProduct">
-                                <h3><a href="#" title="Nibh euismod tincidunt">Nibh euismod tincidunt</a></h3>
-                                <div class="ExtraitProduct">
-                                    Lorem ipsum dolor sit amet, consectetuer kjatdadipdescing elit 
-                                </div>
-                            </div>
-                            <a class="LoopProduct" href="#" title="Produit"></a>
-                        </div>
+                            <a class="LoopProduct" href="details-produit/{{product.slug}}" title="{{product.titre}}"></a>
+                          </div>
+                        {% endfor %}
+
+
+
+
+
+
                     </div>
                 </article>
             </div>
