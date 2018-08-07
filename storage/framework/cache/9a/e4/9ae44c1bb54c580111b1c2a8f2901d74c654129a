@@ -1,0 +1,120 @@
+1533645370a:1:{s:20:"account/register.htm";a:5:{s:8:"fileName";s:20:"account/register.htm";s:7:"content";s:1715:"{% if canRegister %}
+    <form
+        data-request="onRegister">
+	
+	{% if errors.all()  %}
+	  <ul class="alert alert-danger">
+		  {% for error in errors.all() %}
+			  <li style="float:none;display:block">{{ error }}</li>
+		  {% endfor %}
+	  </ul>
+
+	{% endif %}
+	<ul>
+      <li>
+            <!--<label for="registerName">Full Name</label>-->
+            <input
+                name="name"
+                type="text"
+                class="form-control"
+                id="registerName"
+                placeholder="{{ 'Nom & Prénom'|_ }}" />
+		</li>
+
+        <li>
+            <!--<label for="registerEmail">Email</label>-->
+            <input
+                name="email"
+                type="email"
+                class="form-control"
+                id="registerEmail"
+                placeholder="{{ 'E-mail'|_ }}" />
+        </li>
+
+        {% if loginAttribute == "username" %}
+            <li>
+                <!--<label for="registerUsername">Username</label>-->
+                <input
+                    name="username"
+                    type="text"
+                    class="form-control"
+                    id="registerUsername"
+                    placeholder="Enter your username" />
+            </li>
+        {% endif %}
+
+        <li>
+            <!--<label for="registerPassword">Password</label>-->
+            <input
+                name="password"
+                type="password"
+                class="form-control"
+                id="registerPassword"
+                placeholder="{{ 'Mot de passe'|_ }}" />
+        </li>
+
+        <li><input type="submit" class="btn btn-default" value="{{ 'Valider'|_ }}"></li>
+    </form>
+{% else %}
+    <!-- Registration is disabled. -->
+{% endif %}
+";s:5:"mtime";i:1530778764;s:6:"markup";s:1714:"{% if canRegister %}
+    <form
+        data-request="onRegister">
+	
+	{% if errors.all()  %}
+	  <ul class="alert alert-danger">
+		  {% for error in errors.all() %}
+			  <li style="float:none;display:block">{{ error }}</li>
+		  {% endfor %}
+	  </ul>
+
+	{% endif %}
+	<ul>
+      <li>
+            <!--<label for="registerName">Full Name</label>-->
+            <input
+                name="name"
+                type="text"
+                class="form-control"
+                id="registerName"
+                placeholder="{{ 'Nom & Prénom'|_ }}" />
+		</li>
+
+        <li>
+            <!--<label for="registerEmail">Email</label>-->
+            <input
+                name="email"
+                type="email"
+                class="form-control"
+                id="registerEmail"
+                placeholder="{{ 'E-mail'|_ }}" />
+        </li>
+
+        {% if loginAttribute == "username" %}
+            <li>
+                <!--<label for="registerUsername">Username</label>-->
+                <input
+                    name="username"
+                    type="text"
+                    class="form-control"
+                    id="registerUsername"
+                    placeholder="Enter your username" />
+            </li>
+        {% endif %}
+
+        <li>
+            <!--<label for="registerPassword">Password</label>-->
+            <input
+                name="password"
+                type="password"
+                class="form-control"
+                id="registerPassword"
+                placeholder="{{ 'Mot de passe'|_ }}" />
+        </li>
+
+        <li><input type="submit" class="btn btn-default" value="{{ 'Valider'|_ }}"></li>
+    </form>
+{% else %}
+    <!-- Registration is disabled. -->
+{% endif %}";s:4:"code";N;}}

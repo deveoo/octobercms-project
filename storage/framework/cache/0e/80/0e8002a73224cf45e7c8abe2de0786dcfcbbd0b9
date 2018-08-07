@@ -1,0 +1,68 @@
+1533646769a:1:{s:23:"user-reset-password.htm";a:13:{s:8:"fileName";s:23:"user-reset-password.htm";s:7:"content";s:1016:"title = "Mot de passe oublié?"
+url = "/user-reset-password"
+layout = "interne"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeUrl[en] = "/user-reset-password"
+
+[resetPassword]
+paramCode = "code"
+==
+<div>
+  <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6">
+          <h2>{{ 'Modifier votre mot de passe'|_ }}</h2>
+          
+          
+          {% component 'resetPassword' %}
+          <div class="websiteForm">
+            <form data-request="onSend">
+              <ul>
+
+                <li>
+                  <input name="email" type="email" value="" placeholder="{{ 'E-mail'|_ }}">
+                </li>
+
+                <li><input type="submit" id="gform_submit_button_1" class="gform_button button" value=" {{ 'Modifier votre mot de passe'|_ }}" tabindex="9"></li>
+
+            </ul>
+          </form>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>";s:5:"mtime";i:1530626275;s:6:"markup";s:774:"<div>
+  <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6">
+          <h2>{{ 'Modifier votre mot de passe'|_ }}</h2>
+          
+          
+          {% component 'resetPassword' %}
+          <div class="websiteForm">
+            <form data-request="onSend">
+              <ul>
+
+                <li>
+                  <input name="email" type="email" value="" placeholder="{{ 'E-mail'|_ }}">
+                </li>
+
+                <li><input type="submit" id="gform_submit_button_1" class="gform_button button" value=" {{ 'Modifier votre mot de passe'|_ }}" tabindex="9"></li>
+
+            </ul>
+          </form>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>";s:4:"code";N;s:5:"title";s:21:"Mot de passe oublié?";s:3:"url";s:20:"/user-reset-password";s:6:"layout";s:7:"interne";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:7:"viewBag";a:1:{s:9:"localeUrl";a:1:{s:2:"en";s:20:"/user-reset-password";}}s:13:"resetPassword";a:1:{s:9:"paramCode";s:4:"code";}}}

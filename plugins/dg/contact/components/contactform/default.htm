@@ -1,5 +1,10 @@
 
 <form data-request="onSend">
+
+  {% flash success %}
+    <div class="alert alert-info"> {{'Nous avons bien reçu votre demande. Nous vous contacterons dans les plus brefs délais'|_}}</div>
+  {% endflash %}
+
   {% if errors.all()  %}
   <ul class="alert alert-danger">
       {% for error in errors.all() %}

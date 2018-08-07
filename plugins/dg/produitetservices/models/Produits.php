@@ -45,6 +45,12 @@ class Produits extends Model
             'table' => 'dg_produitetservices_produit_fournisseur',
             'order' => 'titre'
         ]
+
+      /*  'pays' => [
+            'dg\Pays\Models\Countries',
+            'table' => 'dg_produitetservices_produit_fournisseur',
+            'order' => 'titre'
+        ]*/
     ];
 
     public $attachOne = [

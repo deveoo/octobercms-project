@@ -5,6 +5,7 @@ use Input;
 use Mail;
 use Validator;
 use Redirect;
+use Flash;
 
 class ContactForm extends ComponentBase
 {
@@ -38,11 +39,14 @@ class ContactForm extends ComponentBase
 
             Mail::send('dg.contact::mail.message', $vars, function($message) {
 
-                $message->to('youremail@gmail.com', 'Admin Person');
+                $message->to('ramzi@positiftunisie.com', 'Admin Person');
                 $message->subject('New message from contact form');
 
             });
         }
+
+        Flash::success('OK');
+        return Redirect::back();
 
     }
 

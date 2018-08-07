@@ -1,2 +1,11 @@
 1.0.1:
-    - Initialize plugin.
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table dg_postuler_'
+    - builder_table_create_dg_postuler_.php
+1.0.3:
+    - 'Updated table dg_postuler_'
+    - builder_table_update_dg_postuler_.php
+1.0.4:
+    - 'Updated table dg_postuler_'
+    - builder_table_update_dg_postuler__2.php

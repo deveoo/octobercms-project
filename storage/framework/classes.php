@@ -247,4 +247,8 @@
   'dg\\Produitetservices\\Models\\Produits' => 'plugins\\dg\\produitetservices\\models\\Produits.php',
   'rainlab\\googleanalytics\\Plugin' => 'plugins\\rainlab\\googleanalytics\\Plugin.php',
   'RainLab\\GoogleAnalytics\\Components\\Tracker' => 'plugins\\rainlab\\googleanalytics\\components\\Tracker.php',
+  'dg\\postuler\\Controllers\\postuler' => 'plugins\\dg\\postuler\\controllers\\postuler.php',
+  'dg\\Postuler\\Models\\Postuler' => 'plugins\\dg\\postuler\\models\\Postuler.php',
+  'Dg\\Postuler\\Models\\Postuler' => 'plugins\\dg\\postuler\\models\\Postuler.php',
+  'dg\\postuler\\Controllers\\postulerform' => 'plugins\\dg\\postuler\\controllers\\postulerform.php',
 );

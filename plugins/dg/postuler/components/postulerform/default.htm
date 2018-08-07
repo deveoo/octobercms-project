@@ -1,5 +1,15 @@
 
-<form data-request="onSend">
+<!--<form data-request="onSave">-->
+<form method="POST" action="{{ url('detail-emploi') }}/{{record.slug}}" accept-charset="UTF8" enctype="multipart/form-data">
+
+  <input name="_handler" type="hidden" value="onSave"  />
+  {{ form_token() }}
+  {{ form_sessionkey() }}
+
+  {% flash success %}
+    <div class="alert alert-info"> {{'Nous avons bien reçu votre demande. Nous vous contacterons dans les plus brefs délais'|_}}</div>
+  {% endflash %}
+
   {% if errors.all()  %}
   <ul class="alert alert-danger">
       {% for error in errors.all() %}
@@ -9,7 +19,7 @@
 
   {% endif %}
   <ul>
-        <input name="offre" id="" type="hidden" value=""  />
+        <input name="offre_id" id="" type="hidden" value="{{ record.titre|raw }}"  />
       <li>
         <input name="nom" id="" type="text" value="" placeholder="{{ 'Nom & prénom'|_ }}" />
         {% if errors.first('nom')  %}  <div class="alert alert-danger">{{ errors.first('nom') }}</div> {% endif %}
@@ -24,17 +34,21 @@
       </li>
       <li>
         <select name="pays">
-          <option value="">Pays</option>
-          <option value="algerie">Algérie</option>
-          <option value="maroc">Maroc</option>
-          <option value="tunisie">Tunisie</option>
+          <option value="">{{ 'Pays'|_ }}</option>
+          <option value="Algerie">{{ 'Algérie'|_ }}</option>
+          <option value="Algerie">{{ 'Lybie'|_ }}</option>
+          <option value="Maroc">{{ 'Maroc'|_ }}</option>
+          <option value="Tunisie">{{ 'Tunisie'|_ }}</option>
         </select>
-        {% if errors.first('email')  %} <div class="alert alert-danger">{{ errors.first('email') }}</div>{% endif %}
       </li>
       <li>
       CV
         <input name="cv" id="" type="file" />
         {{ errors.first('cv') }}
+      </li>
+      <li>
+        <textarea name="description" placeholder="Description"></textarea>
+        {% if errors.first('description')  %} <div class="alert alert-danger">{{ errors.first('description') }}</div>{% endif %}
       </li>
       <li><input type="submit" id="" class="gform_button button" value=" {{ 'Envoyer'|_ }}" tabindex="9" /></li>
 

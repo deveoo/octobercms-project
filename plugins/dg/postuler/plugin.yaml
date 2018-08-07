@@ -4,3 +4,17 @@ plugin:
     author: 'Ramzi Benzina'
     icon: oc-icon-align-justify
     homepage: ''
+permissions:
+    postuler:
+        tab: 'Postuler '
+        label: Postuler
+navigation:
+    postuler:
+        label: Postuler
+        url: /dg/postuler/postuler/
+        icon: icon-life-ring
+        sideMenu:
+            postuler2:
+                label: 'Liste des CV'
+                url: dg/postuler/postuler
+                icon: icon-windows

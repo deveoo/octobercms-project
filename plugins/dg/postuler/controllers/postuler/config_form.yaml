@@ -1,0 +1,10 @@
+name: Postuler
+form: $/dg/postuler/models/postuler/fields.yaml
+modelClass: dg\Postuler\Models\Postuler
+defaultRedirect: dg/postuler/postuler
+create:
+    redirect: 'dg/postuler/postuler/update/:id'
+    redirectClose: dg/postuler/postuler
+update:
+    redirect: dg/postuler/postuler
+    redirectClose: dg/postuler/postuler
