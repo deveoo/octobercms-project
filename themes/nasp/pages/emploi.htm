@@ -31,6 +31,7 @@ if($this['locale'] == 'en') {$this['lien'] = 'job-details';}
 		<tr>
 			<th scope="col">{{ 'Poste'|_ }}</th>
 			<th scope="col">Description</th>
+			<th scope="col">{{ 'Pays'|_ }}</th>
 			<th scope="col">{{ 'Publication'|_ }}</th>
 			<th scope="col">D&eacute;tails</th>
 		</tr>
@@ -40,6 +41,7 @@ if($this['locale'] == 'en') {$this['lien'] = 'job-details';}
 			<tr>
 				<td>{{ offre.titre }}</td>
 				<td>{{ offre.extrait }}</td>
+				<td>{{ offre.pays }}</td>
 				<td>{{ offre.created_at|date("d-m-Y") }}</td>
 				<td><a class="btn btn-primary" href="{{lien}}/{{ offre.slug }}">D&eacute;tails</a></td>
 			</tr>
