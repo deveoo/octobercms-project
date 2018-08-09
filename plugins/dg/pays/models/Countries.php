@@ -35,4 +35,10 @@ class Countries extends Model
         'image' => 'System\Models\File'
     ];
 
+    /** Get Active suppliers **/
+    public static function getPays($id){
+      return Countries::where('id', '=', $id)->first;
+
+    }
+
 }

@@ -7,7 +7,7 @@ fields:
     slug:
         label: URL
         span: auto
-        required: 1
+        required: 0
         preset:
             field: titre
             type: slug
@@ -15,19 +15,19 @@ fields:
     nom_prenom:
         label: 'Nom & Prénom'
         span: auto
-        required: 1
+        required: 0
         type: text
-    email:
+    email2:
         label: Email
         span: auto
-        required: 1
+        required: 0
         type: text
     tel:
         label: Téléphone
         span: auto
         required: 1
         type: text
-    pays:
+    pays2:
         label: Pays
         span: auto
         type: text
@@ -57,14 +57,7 @@ fields:
             extension: auto
         span: auto
         type: fileupload
-    formateur_consultant:
-        label: 'Type de profil'
-        span: auto
-        attributes:
-            formateur: Formateur
-            consultant: Consultant
-        type: dropdown
-    image:
+    image2:
         label: Photo
         mode: image
         imageWidth: '100'

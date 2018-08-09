@@ -1,0 +1,118 @@
+1533821927a:1:{s:19:"details-produit.htm";a:12:{s:8:"fileName";s:19:"details-produit.htm";s:7:"content";s:2052:"title = "Détails Produit"
+url = "/details-produit/:slug"
+layout = "interne"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[builderDetails produit]
+modelClass = "dg\ProduitEtServices\Models\Produits"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "titre"
+notFoundMessage = "Record not found"
+==
+<?
+  use dg\ProduitEtServices\Models\Produits;
+
+  function onStart(){
+    $this['produit'] = Produits::where('slug', '=', $this->param('slug'))->first();
+  }
+?>
+==
+<section>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+          <h1>{{produit.titre}}</h1>
+          <img src="{{supplier.image.path}}" alt="{{supplier.titre}}">
+          {{produit.description|raw }}
+        </div>
+        <div class="col-md-6">
+          {{produit.description|raw }}
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ******************************************************************* -->
+<div class="Disponible">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="TitleDispo">{{'Fournisseurs'|_}}</div>
+          <div class="AllDispo">
+            <div id="owl-disponile">
+              {% for i in 0..10 %}
+              <div class="item">
+                <div class="ContDispo">
+                  <div class="ImgDispo">
+                    <img src="{{ '/assets/images/tus.jpg'|theme }}" alt="TUS Technology" class="img-responsive" />
+                  </div>
+                  <div class="descDispo">
+                    <h3>Nibh euismod tincidunt</h3>
+                    <div class="ExtraitDispo">
+                      Lorem ipsum dolor sit amet, consectetuer kjatdadipdescing elit
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- ******************************************************************* -->
+";s:5:"mtime";i:1533558160;s:6:"markup";s:1529:"<section>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+          <h1>{{produit.titre}}</h1>
+          <img src="{{supplier.image.path}}" alt="{{supplier.titre}}">
+          {{produit.description|raw }}
+        </div>
+        <div class="col-md-6">
+          {{produit.description|raw }}
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ******************************************************************* -->
+<div class="Disponible">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="TitleDispo">{{'Fournisseurs'|_}}</div>
+          <div class="AllDispo">
+            <div id="owl-disponile">
+              {% for i in 0..10 %}
+              <div class="item">
+                <div class="ContDispo">
+                  <div class="ImgDispo">
+                    <img src="{{ '/assets/images/tus.jpg'|theme }}" alt="TUS Technology" class="img-responsive" />
+                  </div>
+                  <div class="descDispo">
+                    <h3>Nibh euismod tincidunt</h3>
+                    <div class="ExtraitDispo">
+                      Lorem ipsum dolor sit amet, consectetuer kjatdadipdescing elit
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- ******************************************************************* -->";s:4:"code";s:158:"  use dg\ProduitEtServices\Models\Produits;
+
+  function onStart(){
+    $this['produit'] = Produits::where('slug', '=', $this->param('slug'))->first();
+  }";s:5:"title";s:16:"Détails Produit";s:3:"url";s:22:"/details-produit/:slug";s:6:"layout";s:7:"interne";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:22:"builderDetails produit";a:5:{s:10:"modelClass";s:36:"dg\ProduitEtServices\Models\Produits";s:15:"identifierValue";s:11:"{{ :slug }}";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:5:"titre";s:15:"notFoundMessage";s:16:"Record not found";}}}

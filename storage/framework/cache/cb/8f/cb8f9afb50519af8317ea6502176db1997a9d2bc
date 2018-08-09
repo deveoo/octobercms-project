@@ -1,0 +1,57 @@
+1533821927a:1:{s:26:"candidature-spontannee.htm";a:13:{s:8:"fileName";s:26:"candidature-spontannee.htm";s:7:"content";s:1315:"title = "Candidature spontannée"
+url = "/candidature-spontannee"
+layout = "interne"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+[postulerform]
+localeUrl[en] = "/candidature-spontannee"
+==
+<section id="main">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-6 col-lg-6 col col-xs-12">
+        <p>Lorem ipsum dolor sit amet, consectetuer kjatdadipdescing elit, sed diadesem nonummy nibh euismod tincidunt ut laoreet doloLorem ipsum dolor sit amet.
+Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.re magna al habent claritatem insitam.
+Typi non habent claritatem insitam...</p>
+<p>Lorem ipsum dolor sit amet, consectetuer kjatdadipdescing elit, sed diadesem nonummy nibh euismod tincidunt ut laoreet doloLorem ipsum dolor sit amet.
+Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.re magna al habent claritatem insitam.
+Typi non habent claritatem insitam...</p>
+      </div>
+      <div class="col-md-6 col-lg-6 col col-xs-12">
+        <h2>{{ 'Postuler'|_ }}</h2>
+
+      <div class="websiteForm">
+        {% component 'postulerform' %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</sections>
+";s:5:"mtime";i:1531105845;s:6:"markup";s:1086:"<section id="main">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-6 col-lg-6 col col-xs-12">
+        <p>Lorem ipsum dolor sit amet, consectetuer kjatdadipdescing elit, sed diadesem nonummy nibh euismod tincidunt ut laoreet doloLorem ipsum dolor sit amet.
+Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.re magna al habent claritatem insitam.
+Typi non habent claritatem insitam...</p>
+<p>Lorem ipsum dolor sit amet, consectetuer kjatdadipdescing elit, sed diadesem nonummy nibh euismod tincidunt ut laoreet doloLorem ipsum dolor sit amet.
+Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.re magna al habent claritatem insitam.
+Typi non habent claritatem insitam...</p>
+      </div>
+      <div class="col-md-6 col-lg-6 col col-xs-12">
+        <h2>{{ 'Postuler'|_ }}</h2>
+
+      <div class="websiteForm">
+        {% component 'postulerform' %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</sections>";s:4:"code";N;s:5:"title";s:23:"Candidature spontannée";s:3:"url";s:23:"/candidature-spontannee";s:6:"layout";s:7:"interne";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:7:"viewBag";a:0:{}s:12:"postulerform";a:1:{s:9:"localeUrl";a:1:{s:2:"en";s:23:"/candidature-spontannee";}}}}

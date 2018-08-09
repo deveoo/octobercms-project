@@ -8,143 +8,62 @@ robot_follow = "follow"
 [viewBag]
 localeUrl[en] = "/formateurs-et-consultants"
 
-[builderList]
-modelClass = "dg\Formateurs\Models\Formateur"
-scope = "-"
-scopeValue = "{{ :scope }}"
-displayColumn = "titre"
-noRecordsMessage = "No records found"
-detailsPage = "-"
-detailsUrlParameter = "id"
-pageNumber = "{{ :page }}"
 ==
-{% set records = builderList.records %}
-{% set displayColumn = builderList.displayColumn %}
-{% set noRecordsMessage = builderList.noRecordsMessage %}
-{% set detailsPage = builderList.detailsPage %}
-{% set detailsKeyColumn = builderList.detailsKeyColumn %}
-{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+<?
+  use dg\Formateurs\Models\Formateur;
 
-<ul class="record-list">
-    {% for record in records %}
-        <li>
-            {# Use spaceless tag to remove spaces inside the A tag. #}
-            {% spaceless %}
-                {% if detailsPage %}
-                    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">
-                {% endif %}
-
-                {{ attribute(record, displayColumn) }}
-
-                {% if detailsPage %}
-                    </a>
-                {% endif %}
-            {% endspaceless %}
-        </li>
-    {% else %}
-        <li class="no-data">{{ noRecordsMessage }}</li>
-    {% endfor %}
-</ul>
-
-{% if records.lastPage > 1 %}
-    <ul class="pagination">
-        {% if records.currentPage > 1 %}
-            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr; Prev</a></li>
-        {% endif %}
-
-        {% for page in 1..records.lastPage %}
-            <li class="{{ records.currentPage == page ? 'active' : null }}">
-                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
-            </li>
-        {% endfor %}
-
-        {% if records.lastPage > records.currentPage %}
-            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Next &rarr;</a></li>
-        {% endif %}
-    </ul>
-{% endif %}
-
+  function onStart(){
+    $this['formateurs'] = Formateur::get();
+  }
+?>
+==
 <section id="mainFormateurs">
-<div class="container">
-<div class="row">
-<div class="col-xs-12">
-<article class="clearfix">
-<div class="Filter"><span class="titleFilter">Filtrer par</span><select>
-<option selected="selected" value="menu_order">Cat&eacute;gorie</option>
-<option value="popularity">Cat&eacute;gorie 1</option>
-<option value="popularity">Cat&eacute;gorie 2</option>
-<option value="popularity">Cat&eacute;gorie 3</option>
-</select><select>
-<option selected="selected" value="menu_order">Sp&eacute;cialit&eacute;</option>
-<option value="popularity">Sp&eacute;cialit&eacute; 1</option>
-<option value="popularity">Sp&eacute;cialit&eacute; 2</option>
-<option value="popularity">Sp&eacute;cialit&eacute; 3</option>
-</select><select>
-<option selected="selected" value="menu_order">Pays</option>
-<option value="popularity">Pays 1</option>
-<option value="popularity">Pays 2</option>
-<option value="popularity">Pays 3</option>
-</select><input type="submit" value="OK" /></div>
-<div class="BloxFormateurs clearfix">
-<div class="BlocFormateur">
-<div class="imgFormateur"><a title="Formateur" href="#"> <img src="/nasp/storage/app/media/nom-formateur.png" alt="Formateur" /> </a></div>
-<div class="infoFormateur">
-<h3><a title="Nom du formateur" href="#">Nom du formateur</a></h3>
-<div class="ExtraitFormateur">Praesent eget ultricies leo. Donec eu aliquam ipsum. Proin suscipit venenatis arcu, ut cursus sapien interdum vitae. Proin suscipit venenatis arcu, ut cursus sapien interdum vitae.</div>
-</div>
-</div>
-<div class="BlocFormateur">
-<div class="imgFormateur"><a title="Formateur" href="#"> <img src="/nasp/storage/app/media/nom-formateur.png" alt="Formateur" /> </a></div>
-<div class="infoFormateur">
-<h3><a title="Nom du formateur" href="#">Nom du formateur</a></h3>
-<div class="ExtraitFormateur">Praesent eget ultricies leo. Donec eu aliquam ipsum. Proin suscipit venenatis arcu, ut cursus sapien interdum vitae.</div>
-</div>
-</div>
-<div class="BlocFormateur">
-<div class="imgFormateur"><a title="Formateur" href="#"> <img src="/nasp/storage/app/media/nom-formateur.png" alt="Formateur" /> </a></div>
-<div class="infoFormateur">
-<h3><a title="Nom du formateur" href="#">Nom du formateur</a></h3>
-<div class="ExtraitFormateur">Praesent eget ultricies leo. Donec eu aliquam ipsum. Proin suscipit venenatis arcu, ut cursus sapien interdum vitae. Proin suscipit venenatis arcu, ut cursus sapien interdum vitae. Proin suscipit venenatis arcu, ut cursus sapien interdum vitae.</div>
-</div>
-</div>
-<div class="BlocFormateur">
-<div class="imgFormateur"><a title="Formateur" href="#"> <img src="/nasp/storage/app/media/nom-formateur.png" alt="Formateur" /> </a></div>
-<div class="infoFormateur">
-<h3><a title="Nom du formateur" href="#">Nom du formateur</a></h3>
-<div class="ExtraitFormateur">Praesent eget ultricies leo. Donec eu aliquam ipsum. Proin suscipit venenatis arcu, ut cursus sapien interdum vitae.</div>
-</div>
-</div>
-<div class="BlocFormateur">
-<div class="imgFormateur"><a title="Formateur" href="#"> <img src="/nasp/storage/app/media/nom-formateur.png" alt="Formateur" /> </a></div>
-<div class="infoFormateur">
-<h3><a title="Nom du formateur" href="#">Nom du formateur</a></h3>
-<div class="ExtraitFormateur">Praesent eget ultricies leo. Donec eu aliquam ipsum. Proin suscipit venenatis arcu, ut cursus sapien interdum vitae.Proin suscipit venenatis arcu, ut cursus sapien interdum vitae. Proin suscipit venenatis arcu, ut cursus sapien interdum vitae.</div>
-</div>
-</div>
-<div class="BlocFormateur">
-<div class="imgFormateur"><a title="Formateur" href="#"> <img src="/nasp/storage/app/media/nom-formateur.png" alt="Formateur" /> </a></div>
-<div class="infoFormateur">
-<h3><a title="Nom du formateur" href="#">Nom du formateur</a></h3>
-<div class="ExtraitFormateur">Praesent eget ultricies leo. Donec eu aliquam ipsum. Proin suscipit venenatis arcu, ut cursus sapien interdum vitae.</div>
-</div>
-</div>
-<div class="BlocFormateur">
-<div class="imgFormateur"><a title="Formateur" href="#"> <img src="/nasp/storage/app/media/nom-formateur.png" alt="Formateur" /> </a></div>
-<div class="infoFormateur">
-<h3><a title="Nom du formateur" href="#">Nom du formateur</a></h3>
-<div class="ExtraitFormateur">Praesent eget ultricies leo. Donec eu aliquam ipsum. Proin suscipit venenatis arcu, ut cursus sapien interdum vitae.</div>
-</div>
-</div>
-<div class="BlocFormateur">
-<div class="imgFormateur"><a title="Formateur" href="#"> <img src="/nasp/storage/app/media/nom-formateur.png" alt="Formateur" /> </a></div>
-<div class="infoFormateur">
-<h3><a title="Nom du formateur" href="#">Nom du formateur</a></h3>
-<div class="ExtraitFormateur">Praesent eget ultricies leo. Donec eu aliquam ipsum. Proin suscipit venenatis arcu, ut cursus sapien interdum vitae.</div>
-</div>
-</div>
-</div>
-<a class="plusFormateurs" title="Voir plus" href="#">Voir plus</a></article>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <article class="clearfix">
+          <!--<div class="Filter">
+            <span class="titleFilter">{{'Filtrer par'|_}}</span>
+            <select>
+              <option selected="selected" value="menu_order">Cat&eacute;gorie</option>
+              <option value="popularity">Cat&eacute;gorie 1</option>
+              <option value="popularity">Cat&eacute;gorie 2</option>
+              <option value="popularity">Cat&eacute;gorie 3</option>
+            </select>
+            <select>
+              <option selected="selected" value="menu_order">Sp&eacute;cialit&eacute;</option>
+              <option value="popularity">Sp&eacute;cialit&eacute; 1</option>
+              <option value="popularity">Sp&eacute;cialit&eacute; 2</option>
+              <option value="popularity">Sp&eacute;cialit&eacute; 3</option>
+            </select>
+            <select>
+              <option selected="selected" value="menu_order">Pays</option>
+              <option value="popularity">Pays 1</option>
+              <option value="popularity">Pays 2</option>
+              <option value="popularity">Pays 3</option>
+            </select>
+            <input type="submit" value="OK" />
+          </div>-->
+        <div class="BloxFormateurs clearfix">
+
+          {% for formateur in formateurs %}
+            <div class="BlocFormateur">
+                <div class="imgFormateur">
+                  <a title="{{ formateur.titre }}" href="detail-formateur/{{ formateur.slug }}">
+                    <img src="{{ formateur.image.path }}" alt="Formateur" class="img-responsive" /> </a>
+                  </div>
+                  <div class="infoFormateur">
+                    <h3><a title="{{ formateur.titre }}" href="detail-formateur/{{ formateur.slug }}">{{ formateur.titre }}</a></h3>
+                    <div class="ExtraitFormateur">{{ formateur.extrait }}
+                  </div>
+              </div>
+            </div>
+
+            {% endfor %}
+
+          <!--<a class="plusFormateurs" title="Voir plus" href="#">Voir plus</a>-->
+        </article>
+      </div>
+    </div>
+  </div>
 </section>

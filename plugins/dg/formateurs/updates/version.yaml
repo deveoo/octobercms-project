@@ -24,3 +24,6 @@
 1.0.9:
     - 'Updated table dg_formateurs_liste'
     - builder_table_update_dg_formateurs_liste_4.php
+1.0.10:
+    - 'Updated table dg_formateurs_liste'
+    - builder_table_update_dg_formateurs_liste_5.php

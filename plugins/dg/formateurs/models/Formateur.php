@@ -26,31 +26,36 @@ class Formateur extends Model
 
     /* Relations */
     public $attachOne = [
-        'image' => 'System\Models\File',
+        'image2' => 'System\Models\File',
         'cv' => 'System\Models\File',
     ];
 
 
-    public $belongsTo = [
+  /*  public $belongsTo = [
       'user' => ['RainLab\User\Models\User']
     ];
 
     public static function getFromUser($user){
-      /*if ($user->groups[0]->id == 3 ) echo 'OK';
-      exit;*/
-      if($user->trainer)
-        return $user->trainer;
+      if ($user->groups[0]->id == 4 ){
+        if($user->trainer)
+          return $user->trainer;
 
-        $trainer = new static;
-        $trainer->user = $user;
-        $trainer->save();
+          $trainer = new static;
+          $trainer->user = $user;
+          $trainer->save();
 
-        $user->trainer = $trainer;
+          $user->trainer = $trainer;
 
-        return $trainer;
+          return $trainer;
+        }
     }
 
-    public function getFormateurConsultantOptions() {
+    public function beforeValidate() {
+
+
+    }
+
+  /*  public function getFormateurConsultantOptions() {
       return array('formateur' => 'Formateur', 'consultant' => 'Consultant');
-    }
+    }*/
 }

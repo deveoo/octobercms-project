@@ -11,14 +11,16 @@ localeUrl[en] = "/emploi"
 ==
 <?
 use Dg\Emploi\Models\Offres;
+use Dg\Pays\Models\Countries;
 function onStart(){
 
 $this['offres'] = Offres::get();
+$this['countries'] = Countries::get();
 $this['locale'] = App::getLocale();
 $this['lien'] = 'detail-emploi';
 //dump($this->locale);
 if($this['locale'] == 'en') {$this['lien'] = 'job-details';}
-
+//dd($this['offres']);
 }
 ?>
 ==
@@ -37,11 +39,26 @@ if($this['locale'] == 'en') {$this['lien'] = 'job-details';}
 		</tr>
 	</thead>
 	<tbody>
+		{% set paysTitle = Null %}
+		{% set paysImage = Null %}
 		{% for offre in offres %}
+			{% for country in countries %}
+				{% if country.id == offre.pays_id  %}
+
+					{% set paysTitle = country.titre %}
+					{% set paysImage = country.image.path %}
+
+				{% endif %}
+			{% endfor  %}
+
 			<tr>
 				<td>{{ offre.titre }}</td>
 				<td>{{ offre.extrait }}</td>
-				<td>{{ offre.pays }}</td>
+
+				<td>
+					<img src="{{paysImage}}" width="20"> {{paysTitle}}
+				</td>
+
 				<td>{{ offre.created_at|date("d-m-Y") }}</td>
 				<td><a class="btn btn-primary" href="{{lien}}/{{ offre.slug }}">D&eacute;tails</a></td>
 			</tr>

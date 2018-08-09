@@ -1,3 +1,4 @@
+;;
 title = "Documents utiles"
 url = "/documents-utiles"
 layout = "interne"
@@ -11,9 +12,12 @@ localeUrl[en] = "/documents-utiles"
 <?
 use Dg\Documentsutiles\Models\Documents;
 use Dg\Pays\Models\Pays;
+use Dg\Pays\Models\Countries;
 function onStart(){
 
   $this['offres'] = Documents::get();
+  $this['countries'] = Countries::get();
+  $this['locale'] = App::getLocale();
   ///dd($this['offres'] );
 }
 ?>
@@ -29,7 +33,16 @@ function onStart(){
 		</tr>
 	</thead>
 	<tbody>
-		{% for offre in offres %}
+    {% set paysTitle = Null %}
+    {% set paysImage = Null %}
+    {% for offre in offres %}
+      {% for country in countries %}
+        {% if country.id == offre.pays_id  %}
+          {% set paysTitle = country.titre %}
+          {% set paysImage = country.image.path %}
+
+        {% endif %}
+      {% endfor  %}
 			<tr>
 				<td>{{ offre.titre }}</td>
 				<td>

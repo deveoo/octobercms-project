@@ -1,3 +1,4 @@
+;;
 title = "Accueil"
 url = "/"
 layout = "default"
@@ -12,12 +13,13 @@ localeUrl[en] = "/home"
 ==
 <?
 use Ramzibenzina\Bandeau\Models\Bandeau;
+use Dg\Produitetservices\Models\Produits;
 function onStart(){
-
-$this['bandeaux'] = Bandeau::get();
-//dd($this['bandeaux']);
-
+  $this['bandeaux'] = Bandeau::get();
+  $this['Produits'] = Produits::get();
+  //dd($this['Produits']);
 }
+
 ?>
 ==
 <div class="BlocxEvenements">
@@ -120,7 +122,8 @@ $this['bandeaux'] = Bandeau::get();
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="ListBlocx">
                     <div class="Opportunites">
-                        <div class="TitleOpportunites">{{ 'Opportunités d’affaires'|_ }} </div>
+                        <div class="TitleOpportunites">&nbsp;</div>
+                        <!--<div class="TitleOpportunites">{{ 'Opportunités d’affaires'|_ }} </div>
                         <div class="TabOpportunites">
                             <div id="tabs">
                                 <ul>
@@ -153,69 +156,24 @@ $this['bandeaux'] = Bandeau::get();
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="Products">
                             <a href="{{ 'produits-services'|page }}" title="Produits" class="TitleProduits">{{ 'Produits'|_ }} </a>
                             <div class="ContProduits">
                                 <div id="owl-products">
+
                                     <div class="item">
                                         <div class="rowProducts">
+                                          {% for produit in Produits %}
                                             <div class="colProduct">
-                                                <a href="#" title="Product">
+                                                <a href="details-produit/{{produit.slug}}" title="{{produit.titre}}">
                                                     <img src="{{ '/assets/images/product1.jpg'|theme }}" alt="Product" />
-                                                    <span class="TitleProduct">Nibh euismod tincidunt</span>
+                                                    <span class="TitleProduct">{{produit.titre}}</span>
                                                 </a>
-                                                <div class="DescProduct">rem ipsum dolor sit amet, consectetuer kjatdadipdescing elit</div>
-                                                <a class="LoopProduct" href="#" title="Produit"></a>
+                                                <div class="DescProduct">{{produit.titre}}</div>
+                                                <a class="LoopProduct" href="details-produit/{{produit.slug}}" title="Produit"></a>
                                             </div>
-                                            <div class="colProduct">
-                                                <a href="#" title="Product">
-                                                    <img src="{{ '/assets/images/product2.jpg'|theme }}" alt="Product" />
-                                                    <span class="TitleProduct">Nibh euismod tincidunt</span>
-                                                </a>
-                                                <div class="DescProduct">rem ipsum dolor sit amet, consectetuer kjatdadipdescing elit</div>
-                                                <a class="LoopProduct" href="#" title="Produit"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="rowProducts">
-                                            <div class="colProduct">
-                                                <a href="#" title="Product">
-                                                    <img src="{{ '/assets/images/product3.jpg'|theme }}" alt="Product" />
-                                                    <span class="TitleProduct">Nibh euismod tincidunt</span>
-                                                </a>
-                                                <div class="DescProduct">rem ipsum dolor sit amet, consectetuer kjatdadipdescing elit</div>
-                                                <a class="LoopProduct" href="#" title="Produit"></a>
-                                            </div>
-                                            <div class="colProduct">
-                                                <a href="#" title="Product">
-                                                    <img src="{{ '/assets/images/product4.jpg'|theme }}" alt="Product" />
-                                                    <span class="TitleProduct">Nibh euismod tincidunt</span>
-                                                </a>
-                                                <div class="DescProduct">rem ipsum dolor sit amet, consectetuer kjatdadipdescing elit</div>
-                                                <a class="LoopProduct" href="#" title="Produit"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="rowProducts">
-                                            <div class="colProduct">
-                                                <a href="#" title="Product">
-                                                    <img src="{{ '/assets/images/product1.jpg'|theme }}" alt="Product" />
-                                                    <span class="TitleProduct">Nibh euismod tincidunt</span>
-                                                </a>
-                                                <div class="DescProduct">rem ipsum dolor sit amet, consectetuer kjatdadipdescing elit</div>
-                                                <a class="LoopProduct" href="#" title="Produit"></a>
-                                            </div>
-                                            <div class="colProduct">
-                                                <a href="#" title="Product">
-                                                    <img src="{{ '/assets/images/product2.jpg'|theme }}" alt="Product" />
-                                                    <span class="TitleProduct">Nibh euismod tincidunt</span>
-                                                </a>
-                                                <div class="DescProduct">rem ipsum dolor sit amet, consectetuer kjatdadipdescing elit</div>
-                                                <a class="LoopProduct" href="#" title="Produit"></a>
-                                            </div>
+                                            {% endfor %}
                                         </div>
                                     </div>
                                 </div>

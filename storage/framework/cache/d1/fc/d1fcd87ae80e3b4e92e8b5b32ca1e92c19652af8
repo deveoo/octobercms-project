@@ -1,0 +1,156 @@
+1533821927a:1:{s:14:"ma-societe.htm";a:13:{s:8:"fileName";s:14:"ma-societe.htm";s:7:"content";s:3336:"title = "Ma societé"
+url = "/ma-societe"
+layout = "user"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeUrl[en] = "/ma-societe"
+
+[session]
+security = "user"
+allowedUserGroups[] = "fournisseur"
+redirect = "login"
+==
+
+<div class="col-md-6 col-lg-6 col col-xs-12">
+  <h2>{{ 'Information de la société'|_ }}</h2>
+
+  <div class="websiteForm">
+    <!--<form data-request="onSave">-->
+    <form method="POST" action="" accept-charset="UTF8" enctype="multipart/form-data">
+
+      <input name="_handler" type="hidden" value="onSave"  />
+      {{ form_token() }}
+      {{ form_sessionkey() }}
+
+      {% flash success %}
+        <div class="alert alert-info"> {{'Nous avons bien reçu votre demande. Nous vous contacterons dans les plus brefs délais'|_}}</div>
+      {% endflash %}
+
+      {% if errors.all()  %}
+      <ul class="alert alert-danger">
+          {% for error in errors.all() %}
+              <li style="float:none;display:block">{{ error }}</li>
+          {% endfor %}
+      </ul>
+
+      {% endif %}
+      <ul>
+
+          <li>
+              <label for="societe">{{ 'Société'|_ }}</label>
+              <input name="titre" id="societe" type="text" value="" placeholder="{{ 'Société'|_ }}" />
+            {% if errors.first('titre')  %}  <div class="alert alert-danger">{{ errors.first('titre') }}</div> {% endif %}
+          </li>
+          <li>
+            <label for="email">{{ 'Email'|_ }}</label>
+            <input name="email" id="" type="email" value="" placeholder="{{ 'E-mail'|_ }}" />
+            {% if errors.first('email')  %} <div class="alert alert-danger">{{ errors.first('email') }}</div>{% endif %}
+          </li>
+          <li>
+            <label for="phone">{{ 'Téléphone'|_ }}</label>
+            <input name="phone" id="" type="text" value="" placeholder="{{ 'Téléphone'|_ }}" />
+            {% if errors.first('email')  %} <div class="alert alert-danger">{{ errors.first('email') }}</div>{% endif %}
+          </li>
+          <li>
+            <label for="extrait">{{ 'Description'|_ }}</label>
+            <textarea name="extrait" id="extrait" type="text" value="" placeholder="{{ 'Extrait'|_ }}" ></textarea>
+            {% if errors.first('extrait')  %}   <div class="alert alert-danger">{{ errors.first('extrait') }}</div> {% endif %}
+          </li>
+
+          <li>
+            <select name="pays">
+              <option value="">{{ 'Pays'|_ }}</option>
+              <option value="Algerie">{{ 'Algérie'|_ }}</option>
+              <option value="Algerie">{{ 'Lybie'|_ }}</option>
+              <option value="Maroc">{{ 'Maroc'|_ }}</option>
+              <option value="Tunisie">{{ 'Tunisie'|_ }}</option>
+            </select>
+          </li>
+          <li>
+          CV
+            <input name="cv" id="" type="file" />
+            {{ errors.first('cv') }}
+          </li>
+          <li>
+            <textarea name="description" placeholder="Description"></textarea>
+            {% if errors.first('description')  %} <div class="alert alert-danger">{{ errors.first('description') }}</div>{% endif %}
+          </li>
+          <li><input type="submit" id="" class="gform_button button" value=" {{ 'Envoyer'|_ }}" tabindex="9" /></li>
+
+      </ul>
+    </form>
+  </div>
+</div>
+";s:5:"mtime";i:1533821272;s:6:"markup";s:3071:"<div class="col-md-6 col-lg-6 col col-xs-12">
+  <h2>{{ 'Information de la société'|_ }}</h2>
+
+  <div class="websiteForm">
+    <!--<form data-request="onSave">-->
+    <form method="POST" action="" accept-charset="UTF8" enctype="multipart/form-data">
+
+      <input name="_handler" type="hidden" value="onSave"  />
+      {{ form_token() }}
+      {{ form_sessionkey() }}
+
+      {% flash success %}
+        <div class="alert alert-info"> {{'Nous avons bien reçu votre demande. Nous vous contacterons dans les plus brefs délais'|_}}</div>
+      {% endflash %}
+
+      {% if errors.all()  %}
+      <ul class="alert alert-danger">
+          {% for error in errors.all() %}
+              <li style="float:none;display:block">{{ error }}</li>
+          {% endfor %}
+      </ul>
+
+      {% endif %}
+      <ul>
+
+          <li>
+              <label for="societe">{{ 'Société'|_ }}</label>
+              <input name="titre" id="societe" type="text" value="" placeholder="{{ 'Société'|_ }}" />
+            {% if errors.first('titre')  %}  <div class="alert alert-danger">{{ errors.first('titre') }}</div> {% endif %}
+          </li>
+          <li>
+            <label for="email">{{ 'Email'|_ }}</label>
+            <input name="email" id="" type="email" value="" placeholder="{{ 'E-mail'|_ }}" />
+            {% if errors.first('email')  %} <div class="alert alert-danger">{{ errors.first('email') }}</div>{% endif %}
+          </li>
+          <li>
+            <label for="phone">{{ 'Téléphone'|_ }}</label>
+            <input name="phone" id="" type="text" value="" placeholder="{{ 'Téléphone'|_ }}" />
+            {% if errors.first('email')  %} <div class="alert alert-danger">{{ errors.first('email') }}</div>{% endif %}
+          </li>
+          <li>
+            <label for="extrait">{{ 'Description'|_ }}</label>
+            <textarea name="extrait" id="extrait" type="text" value="" placeholder="{{ 'Extrait'|_ }}" ></textarea>
+            {% if errors.first('extrait')  %}   <div class="alert alert-danger">{{ errors.first('extrait') }}</div> {% endif %}
+          </li>
+
+          <li>
+            <select name="pays">
+              <option value="">{{ 'Pays'|_ }}</option>
+              <option value="Algerie">{{ 'Algérie'|_ }}</option>
+              <option value="Algerie">{{ 'Lybie'|_ }}</option>
+              <option value="Maroc">{{ 'Maroc'|_ }}</option>
+              <option value="Tunisie">{{ 'Tunisie'|_ }}</option>
+            </select>
+          </li>
+          <li>
+          CV
+            <input name="cv" id="" type="file" />
+            {{ errors.first('cv') }}
+          </li>
+          <li>
+            <textarea name="description" placeholder="Description"></textarea>
+            {% if errors.first('description')  %} <div class="alert alert-danger">{{ errors.first('description') }}</div>{% endif %}
+          </li>
+          <li><input type="submit" id="" class="gform_button button" value=" {{ 'Envoyer'|_ }}" tabindex="9" /></li>
+
+      </ul>
+    </form>
+  </div>
+</div>";s:4:"code";N;s:5:"title";s:11:"Ma societé";s:3:"url";s:11:"/ma-societe";s:6:"layout";s:4:"user";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:7:"viewBag";a:1:{s:9:"localeUrl";a:1:{s:2:"en";s:11:"/ma-societe";}}s:7:"session";a:3:{s:8:"security";s:4:"user";s:17:"allowedUserGroups";a:1:{i:0;s:11:"fournisseur";}s:8:"redirect";s:5:"login";}}}

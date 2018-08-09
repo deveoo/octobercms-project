@@ -1,0 +1,143 @@
+1533821927a:1:{s:20:"user/fournisseur.htm";a:6:{s:8:"fileName";s:20:"user/fournisseur.htm";s:7:"content";s:1639:"==
+<h1>{{ this.page.title|_ }}</h1>
+
+<ul class="dashboard-menu-vertical">
+
+  <li>
+    <a href="dashboard" title="dashborad">
+        <span class="dashIco">
+          <i class="fa fa-home"></i>
+        </span>
+        <span class="dashTitle">
+          {{'Tableau de bord' |_}}
+        </span>
+    </a>
+  </li>
+    <li>
+      <a href="#" title="dashborad">
+          <span class="dashIco">
+            <i class="fa fa-suitcase"></i>
+          </span>
+          <span class="dashTitle">
+            {{'Ma société' |_}}
+          </span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#" title="dashborad">
+          <span class="dashIco">
+            <i class="fa fa-camera"></i>
+          </span>
+          <span class="dashTitle">
+            {{'Mes produits' |_}}
+          </span>
+      </a>
+    </li>
+
+
+    <li>
+      <a href="#" title="dashborad">
+          <span class="dashIco">
+            <i class="fa fa-calendar"></i>
+          </span>
+          <span class="dashTitle">
+            {{'Abonnements' |_}}
+          </span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#" title="dashborad">
+          <span class="dashIco">
+            <i class="fa fa-user"></i>
+          </span>
+          <span class="dashTitle">
+            {{'Mon Profil' |_}}
+          </span>
+      </a>
+    </li>
+
+
+    <li>
+      <a href="#" title="dashborad">
+          <span class="dashIco">
+            <i class="fa fa-key" aria-hidden="true"></i>
+          </span>
+          <span class="dashTitle">
+            {{'Déconnexion' |_}}
+          </span>
+      </a>
+    </li>
+</ul>
+";s:5:"mtime";i:1530877403;s:6:"markup";s:1633:"<h1>{{ this.page.title|_ }}</h1>
+
+<ul class="dashboard-menu-vertical">
+
+  <li>
+    <a href="dashboard" title="dashborad">
+        <span class="dashIco">
+          <i class="fa fa-home"></i>
+        </span>
+        <span class="dashTitle">
+          {{'Tableau de bord' |_}}
+        </span>
+    </a>
+  </li>
+    <li>
+      <a href="#" title="dashborad">
+          <span class="dashIco">
+            <i class="fa fa-suitcase"></i>
+          </span>
+          <span class="dashTitle">
+            {{'Ma société' |_}}
+          </span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#" title="dashborad">
+          <span class="dashIco">
+            <i class="fa fa-camera"></i>
+          </span>
+          <span class="dashTitle">
+            {{'Mes produits' |_}}
+          </span>
+      </a>
+    </li>
+
+
+    <li>
+      <a href="#" title="dashborad">
+          <span class="dashIco">
+            <i class="fa fa-calendar"></i>
+          </span>
+          <span class="dashTitle">
+            {{'Abonnements' |_}}
+          </span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#" title="dashborad">
+          <span class="dashIco">
+            <i class="fa fa-user"></i>
+          </span>
+          <span class="dashTitle">
+            {{'Mon Profil' |_}}
+          </span>
+      </a>
+    </li>
+
+
+    <li>
+      <a href="#" title="dashborad">
+          <span class="dashIco">
+            <i class="fa fa-key" aria-hidden="true"></i>
+          </span>
+          <span class="dashTitle">
+            {{'Déconnexion' |_}}
+          </span>
+      </a>
+    </li>
+</ul>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

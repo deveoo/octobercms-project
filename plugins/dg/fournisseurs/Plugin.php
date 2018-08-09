@@ -10,7 +10,7 @@ class Plugin extends PluginBase
 {
   public function registerComponents()
   {
-  } 
+  }
 
     public function registerSettings()
     {
@@ -38,9 +38,8 @@ class Plugin extends PluginBase
         if( $groupsField->value == Null )
             return;
 
-        if(ProfileModel::getFromUser($model)->user->groups[0]->id != 3 )
-          return;
-
+        if(@ProfileModel::getFromUser($model)->user->groups[0]->id == 3 )
+          {
           $form->addTabFields([
               'supplier[titre]' => [
                 'label' => "société",
@@ -130,6 +129,7 @@ class Plugin extends PluginBase
 
               ],
           ]);
+        }
 
       });
 

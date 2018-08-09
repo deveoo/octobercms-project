@@ -1,0 +1,104 @@
+1533821927a:1:{s:20:"documents-utiles.htm";a:12:{s:8:"fileName";s:20:"documents-utiles.htm";s:7:"content";s:1596:";;
+title = "Documents utiles"
+url = "/documents-utiles"
+layout = "interne"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeUrl[en] = "/documents-utiles"
+==
+<?
+use Dg\Documentsutiles\Models\Documents;
+use Dg\Pays\Models\Pays;
+use Dg\Pays\Models\Countries;
+function onStart(){
+
+  $this['offres'] = Documents::get();
+  $this['countries'] = Countries::get();
+  $this['locale'] = App::getLocale();
+  ///dd($this['offres'] );
+}
+?>
+==
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">{{ 'Titre'|_ }}</th>
+			<th scope="col">Description</th>
+			<th scope="col">{{ 'Pays'|_ }}</th>
+			<th scope="col">{{ 'Télécharger'|_ }}</th>
+		</tr>
+	</thead>
+	<tbody>
+    {% set paysTitle = Null %}
+    {% set paysImage = Null %}
+    {% for offre in offres %}
+      {% for country in countries %}
+        {% if country.id == offre.pays_id  %}
+          {% set paysTitle = country.titre %}
+          {% set paysImage = country.image.path %}
+
+        {% endif %}
+      {% endfor  %}
+			<tr>
+				<td>{{ offre.titre }}</td>
+				<td>
+            {% if offre.description != '' %}
+              {{ offre.description }}
+            {% else %}
+            -
+            {% endif %}
+        </td>
+				<td><img src="{{ offre.pays.image.path }}" width="20"> {{ offre.pays.titre }}</td>
+				<td><a href="{{ offre.document.path }}" target="_blank" style="color: #fff; background:#0e73c0; padding: 5px 10px;"><i class=" fa fa-download"></i> {{ 'Télécharger'|_ }} </a> </td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+";s:5:"mtime";i:1533724292;s:6:"markup";s:1111:"<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">{{ 'Titre'|_ }}</th>
+			<th scope="col">Description</th>
+			<th scope="col">{{ 'Pays'|_ }}</th>
+			<th scope="col">{{ 'Télécharger'|_ }}</th>
+		</tr>
+	</thead>
+	<tbody>
+    {% set paysTitle = Null %}
+    {% set paysImage = Null %}
+    {% for offre in offres %}
+      {% for country in countries %}
+        {% if country.id == offre.pays_id  %}
+          {% set paysTitle = country.titre %}
+          {% set paysImage = country.image.path %}
+
+        {% endif %}
+      {% endfor  %}
+			<tr>
+				<td>{{ offre.titre }}</td>
+				<td>
+            {% if offre.description != '' %}
+              {{ offre.description }}
+            {% else %}
+            -
+            {% endif %}
+        </td>
+				<td><img src="{{ offre.pays.image.path }}" width="20"> {{ offre.pays.titre }}</td>
+				<td><a href="{{ offre.document.path }}" target="_blank" style="color: #fff; background:#0e73c0; padding: 5px 10px;"><i class=" fa fa-download"></i> {{ 'Télécharger'|_ }} </a> </td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>";s:4:"code";s:271:"use Dg\Documentsutiles\Models\Documents;
+use Dg\Pays\Models\Pays;
+use Dg\Pays\Models\Countries;
+function onStart(){
+
+  $this['offres'] = Documents::get();
+  $this['countries'] = Countries::get();
+  $this['locale'] = App::getLocale();
+  ///dd($this['offres'] );
+}";s:5:"title";s:16:"Documents utiles";s:3:"url";s:17:"/documents-utiles";s:6:"layout";s:7:"interne";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:7:"viewBag";a:1:{s:9:"localeUrl";a:1:{s:2:"en";s:17:"/documents-utiles";}}}}

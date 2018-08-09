@@ -16,10 +16,11 @@ fields:
         label: Société
         span: auto
         type: text
-    pays:
+    pays_id:
         label: Pays
         span: auto
-        type: text
+        required: 1
+        type: dropdown
     extrait:
         label: Extrait
         size: ''

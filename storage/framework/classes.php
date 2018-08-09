@@ -251,4 +251,6 @@
   'dg\\Postuler\\Models\\Postuler' => 'plugins\\dg\\postuler\\models\\Postuler.php',
   'Dg\\Postuler\\Models\\Postuler' => 'plugins\\dg\\postuler\\models\\Postuler.php',
   'dg\\postuler\\Controllers\\postulerform' => 'plugins\\dg\\postuler\\controllers\\postulerform.php',
+  'Dg\\Produitetservices\\Models\\Produits' => 'plugins\\dg\\produitetservices\\models\\Produits.php',
+  'Dg\\Pays\\Models\\Countries' => 'plugins\\dg\\pays\\models\\Countries.php',
 );

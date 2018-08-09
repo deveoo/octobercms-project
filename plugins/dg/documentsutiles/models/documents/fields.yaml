@@ -2,13 +2,13 @@ fields:
     titre:
         label: Titre
         span: auto
+        required: 1
         type: text
-    pays:
+    pays_id:
         label: Pays
-        nameFrom: titre
-        descriptionFrom: description
         span: auto
-        type: relation
+        required: 1
+        type: dropdown
     description:
         label: Description
         size: ''
@@ -22,4 +22,5 @@ fields:
             mode: crop
             extension: auto
         span: auto
+        required: 1
         type: fileupload

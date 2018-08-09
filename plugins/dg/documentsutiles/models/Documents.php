@@ -2,6 +2,7 @@
 
 use Model;
 
+use dg\Pays\Models\Countries;
 /**
  * Model
  */
@@ -36,7 +37,7 @@ class Documents extends Model
       ];*/
 
       public $hasOne = [
-          'pays' => ['dg\Pays\Models\Countries', 'key' => 'id'] ,
+          'pays' => ['dg\Pays\Models\Countries', 'key' => 'id','otherKey' => 'pays_id'] ,
       ];
     /* public $hasOne = [
        'pays_id' => [
@@ -51,6 +52,12 @@ class Documents extends Model
          'document' => 'System\Models\File',
 
      ];
+
+     public function getPaysIdOptions()
+     {
+       $contries = new Countries();
+         return $contries->orderBy('titre')->lists('titre', 'id');
+     }
 
     public $table = 'dg_documentsutiles_docs';
     public $translatable = ['titre', 'description' ];

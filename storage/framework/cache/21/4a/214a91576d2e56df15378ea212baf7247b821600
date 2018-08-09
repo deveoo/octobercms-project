@@ -1,0 +1,123 @@
+1533821927a:1:{s:26:"formateurs-consultants.htm";a:12:{s:8:"fileName";s:26:"formateurs-consultants.htm";s:7:"content";s:2592:"title = "Formateurs et consultants"
+url = "/formateurs-consultants"
+layout = "interne"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeUrl[en] = "/formateurs-et-consultants"
+
+==
+<?
+  use dg\Formateurs\Models\Formateur;
+
+  function onStart(){
+    $this['formateurs'] = Formateur::get();
+  }
+?>
+==
+<section id="mainFormateurs">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <article class="clearfix">
+          <!--<div class="Filter">
+            <span class="titleFilter">{{'Filtrer par'|_}}</span>
+            <select>
+              <option selected="selected" value="menu_order">Cat&eacute;gorie</option>
+              <option value="popularity">Cat&eacute;gorie 1</option>
+              <option value="popularity">Cat&eacute;gorie 2</option>
+              <option value="popularity">Cat&eacute;gorie 3</option>
+            </select>
+            <select>
+              <option selected="selected" value="menu_order">Sp&eacute;cialit&eacute;</option>
+              <option value="popularity">Sp&eacute;cialit&eacute; 1</option>
+              <option value="popularity">Sp&eacute;cialit&eacute; 2</option>
+              <option value="popularity">Sp&eacute;cialit&eacute; 3</option>
+            </select>
+            <select>
+              <option selected="selected" value="menu_order">Pays</option>
+              <option value="popularity">Pays 1</option>
+              <option value="popularity">Pays 2</option>
+              <option value="popularity">Pays 3</option>
+            </select>
+            <input type="submit" value="OK" />
+          </div>-->
+        <div class="BloxFormateurs clearfix">
+
+          {% for formateur in formateurs %}
+            <div class="BlocFormateur">
+                <div class="imgFormateur">
+                  <a title="{{ formateur.titre }}" href="detail-formateur/{{ formateur.slug }}">
+                    <img src="{{ formateur.image.path }}" alt="Formateur" class="img-responsive" /> </a>
+                  </div>
+                  <div class="infoFormateur">
+                    <h3><a title="{{ formateur.titre }}" href="detail-formateur/{{ formateur.slug }}">{{ formateur.titre }}</a></h3>
+                    <div class="ExtraitFormateur">{{ formateur.extrait }}
+                  </div>
+              </div>
+            </div>
+
+            {% endfor %}
+
+          <!--<a class="plusFormateurs" title="Voir plus" href="#">Voir plus</a>-->
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+";s:5:"mtime";i:1533735616;s:6:"markup";s:2246:"<section id="mainFormateurs">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <article class="clearfix">
+          <!--<div class="Filter">
+            <span class="titleFilter">{{'Filtrer par'|_}}</span>
+            <select>
+              <option selected="selected" value="menu_order">Cat&eacute;gorie</option>
+              <option value="popularity">Cat&eacute;gorie 1</option>
+              <option value="popularity">Cat&eacute;gorie 2</option>
+              <option value="popularity">Cat&eacute;gorie 3</option>
+            </select>
+            <select>
+              <option selected="selected" value="menu_order">Sp&eacute;cialit&eacute;</option>
+              <option value="popularity">Sp&eacute;cialit&eacute; 1</option>
+              <option value="popularity">Sp&eacute;cialit&eacute; 2</option>
+              <option value="popularity">Sp&eacute;cialit&eacute; 3</option>
+            </select>
+            <select>
+              <option selected="selected" value="menu_order">Pays</option>
+              <option value="popularity">Pays 1</option>
+              <option value="popularity">Pays 2</option>
+              <option value="popularity">Pays 3</option>
+            </select>
+            <input type="submit" value="OK" />
+          </div>-->
+        <div class="BloxFormateurs clearfix">
+
+          {% for formateur in formateurs %}
+            <div class="BlocFormateur">
+                <div class="imgFormateur">
+                  <a title="{{ formateur.titre }}" href="detail-formateur/{{ formateur.slug }}">
+                    <img src="{{ formateur.image.path }}" alt="Formateur" class="img-responsive" /> </a>
+                  </div>
+                  <div class="infoFormateur">
+                    <h3><a title="{{ formateur.titre }}" href="detail-formateur/{{ formateur.slug }}">{{ formateur.titre }}</a></h3>
+                    <div class="ExtraitFormateur">{{ formateur.extrait }}
+                  </div>
+              </div>
+            </div>
+
+            {% endfor %}
+
+          <!--<a class="plusFormateurs" title="Voir plus" href="#">Voir plus</a>-->
+        </article>
+      </div>
+    </div>
+  </div>
+</section>";s:4:"code";s:112:"  use dg\Formateurs\Models\Formateur;
+
+  function onStart(){
+    $this['formateurs'] = Formateur::get();
+  }";s:5:"title";s:25:"Formateurs et consultants";s:3:"url";s:23:"/formateurs-consultants";s:6:"layout";s:7:"interne";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:7:"viewBag";a:1:{s:9:"localeUrl";a:1:{s:2:"en";s:26:"/formateurs-et-consultants";}}}}
