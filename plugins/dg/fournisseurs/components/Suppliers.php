@@ -3,6 +3,7 @@
 use Cms\Classes\ComponentBase;
 use dg\Fournisseurs\Controllers\Suppliers as SuppliersController;
 use dg\Fournisseurs\Models\Suppliers;
+use RainLab\User\Models\Settings as UserSettings;
 
 class Suppliers extends ComponentBase
 {
@@ -33,5 +34,45 @@ class Suppliers extends ComponentBase
     {
         return ['error' => SuppliersController::create(post('Suppliers'))];
     }
+
+    /**
+     * Update the user
+     */
+    public function onFrontUpdate()
+    {
+        /*if (!$user = $this->user()) {
+            return;
+        }*/
+
+        if (!$supplier = $this->suppliers()) {
+            return;
+        }
+
+
+        if (Input::hasFile('avatar')) {
+            $user->avatar = Input::file('avatar');
+        }
+
+        $user->fill(post());
+        $user->save();
+
+        /*
+         * Password has changed, reauthenticate the user
+         */
+        if (strlen(post('password'))) {
+            Auth::login($user->reload(), true);
+        }
+
+        Flash::success(post('flash', Lang::get(/*Settings successfully saved!*/'rainlab.user::lang.account.success_saved')));
+
+        /*
+         * Redirect
+         */
+        if ($redirect = $this->makeRedirection()) {
+            return $redirect;
+        }
+
+        $this->prepareVars();
+    }*/
 
 }

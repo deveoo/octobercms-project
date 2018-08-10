@@ -42,8 +42,12 @@ class Suppliers extends Model
       if($user->supplier)
         return $user->supplier;
 
+      if ($user->groups[0]->id != 3 )
+        return;
+
         $supplier = new static;
         $supplier->user = $user;
+
         $supplier->save();
 
         $user->supplier = $supplier;
@@ -61,6 +65,11 @@ class Suppliers extends Model
     public static function getActiveSuppliers(){
       return Suppliers::where('activated', '=', '1')
         ->paginate(1);
+    }
+
+    /** Get Active suppliers **/
+    public static function getCurrentSupplier($userId){
+      return Suppliers::where('user_id', '=', $userId)->first();
     }
 
 

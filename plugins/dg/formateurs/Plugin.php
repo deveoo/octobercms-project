@@ -18,10 +18,10 @@ class Plugin extends PluginBase
 
     /***** Ramzi BENZINA *****/
 
-    /*public function boot()
+    public function boot()
     {
       UserModel::extend(function($model){
-        $model->hasOne['formateur-consultant'] = ['dg\Formateurs\Models\Formateur'];
+        $model->hasOne['formateur'] = ['dg\Formateurs\Models\Formateur'];
       });
 
 
@@ -35,8 +35,10 @@ class Plugin extends PluginBase
             return;
 
           // ensure tghat user exists before adding custom fields
-          if(@FormateurModel::getFromUser($model)->user->groups[0]->id == 4 )
-            {
+
+          if(@FormateurModel::getFromUser($model)->user->groups[0]->id != 4 )
+          return;
+
           FormateurModel::getFromUser($model);
 
           $groupsField = $form->getField('groups');
@@ -47,64 +49,63 @@ class Plugin extends PluginBase
 
 
           $form->addTabFields([
-              'formateur-consultant[titre]' => [
+              'formateur[titre]' => [
                 'label' => "Titre",
                 'tab' => 'Formateur & consultant'
               ],
 
-              'formateur-consultant[slug]' => [
+              'formateur[slug]' => [
                 'label' => "URL",
                 'tab' => 'Formateur & consultant'
               ],
 
-              'formateur-consultant[nom_prenom]' => [
+              'formateur[nom_prenom]' => [
                 'label' => "Nom & Prénom",
                 'tab'   => 'Formateur & consultant',
               ],
-              'formateur-consultant[email2]' => [
+              'formateur[email2]' => [
                 'label' => "Email",
                 'tab'   => 'Formateur & consultant',
               ],
-              'formateur-consultant[tel]' => [
+              'formateur[tel]' => [
                 'label' => "Téléphone",
                 'tab'   => 'Formateur & consultant',
               ],
-              'formateur-consultant[poste]' => [
+              'formateur[poste]' => [
                 'label' => "Poste",
                 'tab'   => 'Formateur & consultant',
               ],
 
-              'formateur-consultant[description]' => [
+              'formateur[description]' => [
                 'label' => "Description",
                 'tab'   => 'Formateur & consultant',
                 'type'  =>  'textarea'
               ],
 
-              'formateur-consultant[linkedin_viadeo]' => [
+              'formateur[linkedin_viadeo]' => [
                 'label' => "Linkedin",
                 'tab'   => 'Formateur & consultant',
               ],
 
-              'formateur-consultant[youtube_siteperso]' => [
+              'formateur[youtube_siteperso]' => [
                 'label' => "Youtube ou site personnel",
                 'tab'   => 'Formateur & consultant',
               ],
-              'formateur-consultant[image2]' => [
+              'formateur[image2]' => [
                 'label' => "Photo",
                 'tab'   => 'Fichier',
                 'type'  => 'fileupload',
               ],
 
-              'formateur-consultant[cv]' => [
+              'formateur[cv]' => [
                 'label' => "CV",
                 'tab'   => 'Fichier',
                 'type'  => 'fileupload',
               ],
 
           ]);
-        }
 
       });
 
-    }*/
+    }
 }

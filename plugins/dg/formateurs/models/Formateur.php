@@ -31,23 +31,24 @@ class Formateur extends Model
     ];
 
 
-  /*  public $belongsTo = [
+    public $belongsTo = [
       'user' => ['RainLab\User\Models\User']
     ];
 
     public static function getFromUser($user){
-      if ($user->groups[0]->id == 4 ){
-        if($user->trainer)
-          return $user->trainer;
+        if($user->formateur)
+          return $user->formateur;
 
-          $trainer = new static;
-          $trainer->user = $user;
-          $trainer->save();
+        if ($user->groups[0]->id != 4 )
+          return;
 
-          $user->trainer = $trainer;
+        $trainer = new static;
+        $trainer->user = $user;
+        $trainer->save();
 
-          return $trainer;
-        }
+        $user->trainer = $trainer;
+
+        return $trainer;
     }
 
     public function beforeValidate() {
