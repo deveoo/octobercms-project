@@ -10,6 +10,9 @@ class Plugin extends PluginBase
 {
   public function registerComponents()
   {
+    return [
+          'dg\Fournisseurs\Components\SupplierFrontForm' => 'supplierfrontform',
+      ];
   }
 
     public function registerSettings()

@@ -1,0 +1,123 @@
+<h2>{{ 'Information de la société'|_ }}</h2>
+
+<div class="websiteForm">
+<!-- ## ###################################  form begin  ########################################################### ## -->
+
+    <form method="POST" action="" accept-charset="UTF8" enctype="multipart/form-data">
+
+      <input name="_handler" type="hidden" value="onUpdate"  />
+      {{ form_token() }}
+      {{ form_sessionkey() }}
+
+      {% flash success %}
+        <div class="alert alert-info"> {{'Contenu modifié avec Succès!'|_}}</div>
+      {% endflash %}
+
+      {% if errors.all()  %}
+      <ul class="alert alert-danger">
+          {% for error in errors.all() %}
+              <li style="float:none;display:block">{{ error }}</li>
+          {% endfor %}
+      </ul>
+      {% endif %}
+      <ul>
+          <li>
+              <label for="societe">{{ 'Société'|_ }} <sup>*</sup></label>
+              <input name="titre" id="societe" type="text" value="{{supplier.titre}}" placeholder="{{ 'Société'|_ }}" />
+            {% if errors.first('titre')  %}  <div class="alert alert-danger">{{ errors.first('titre') }}</div> {% endif %}
+          </li>
+          <li>
+            <label for="email">{{ 'E-mail Professionnel'|_ }} <sup>*</sup> </label>
+            <input name="email" id="" type="email" value="{{supplier.email}}" placeholder="{{ 'E-mail Professionnel'|_ }}" />
+            {% if errors.first('email')  %} <div class="alert alert-danger">{{ errors.first('email') }}</div>{% endif %}
+          </li>
+          <li>
+            <label for="phone">{{ 'Téléphone'|_ }} <sup>*</sup></label>
+            <input name="phone" id="" type="text" value="{{supplier.phone}}" placeholder="{{ 'Téléphone'|_ }}" />
+            {% if errors.first('phone')  %} <div class="alert alert-danger">{{ errors.first('phone') }}</div>{% endif %}
+          </li>
+          <li>
+            <label for="fax">{{ 'Fax'|_ }} </label>
+            <input name="fax" id="" type="text" value="{{supplier.fax}}" placeholder="{{ 'Fax'|_ }}" />
+            {% if errors.first('fax')  %} <div class="alert alert-danger">{{ errors.first('fax') }}</div>{% endif %}
+          </li>
+          <li>
+            <label for="map">{{ 'Adresse sur Google Map'|_ }} </label>
+            <textarea name="map" id="map" rows="4" type="text" placeholder="{{ 'Map'|_ }}" >{{supplier.map}} </textarea>
+            {% if errors.first('map')  %}   <div class="alert alert-danger">{{ errors.first('map') }}</div> {% endif %}
+          </li>
+          <li>
+            <label for="adresse1">{{ 'Adresse 1'|_ }} <sup>*</sup></label>
+            <input name="adresse1" id="" type="text" value="{{supplier.adresse1}}" placeholder="{{ 'Adresse 1'|_ }}" />
+            {% if errors.first('adresse1')  %} <div class="alert alert-danger">{{ errors.first('adresse1') }}</div>{% endif %}
+          </li>
+          <li>
+            <label for="adresse2">{{ 'Adresse 2'|_ }} <sup>*</sup></label>
+            <input name="adresse2" id="" type="text" value="{{supplier.phone}}" placeholder="{{ 'Adresse 2'|_ }}" />
+            {% if errors.first('adresse2')  %} <div class="alert alert-danger">{{ errors.first('adresse2') }}</div>{% endif %}
+          </li>
+          {{supplier.pays}}
+          <li>
+              <label for="pays">{{ 'Pays'|_ }} <sup>*</sup></label>
+            <select name="pays">
+              <option value="">{{ 'Pays'|_ }}</option>
+              <option value="Algérie">{{ 'Algérie'|_ }}</option>
+              <option value="Libye">{{ 'Libye'|_ }}</option>
+              <option value="Maroc">{{ 'Maroc'|_ }}</option>
+              <option value="Tunisie">{{ 'Tunisie'|_ }}</option>
+            </select>
+          </li>
+
+          <li>
+            <label for="siteweb">{{ 'Site web'|_ }} <sup>*</sup></label>
+            <input name="siteweb" id="siteweb" type="text" value="{{supplier.siteweb}}" placeholder="http://" />
+            {% if errors.first('siteweb')  %} <div class="alert alert-danger">{{ errors.first('siteweb') }}</div>{% endif %}
+          </li>
+
+          <li>
+            <label for="facebook">{{ 'Page Facebook'|_ }} </label>
+            <input name="facebook" id="facebook" type="text" value="{{supplier.facebook}}" placeholder="http://" />
+            {% if errors.first('facebook')  %} <div class="alert alert-danger">{{ errors.first('facebook') }}</div>{% endif %}
+          </li>
+          <li>
+            <label for="twitter">{{ 'Page Twitter'|_ }} </label>
+            <input name="twitter" id="twitter" type="text" value="{{supplier.twitter}}" placeholder="http://" />
+            {% if errors.first('twitter')  %} <div class="alert alert-danger">{{ errors.first('twitter') }}</div>{% endif %}
+          </li>
+          <li>
+            <label for="linkedin">{{ 'Page Linkedin'|_ }} </label>
+            <input name="linkedin" id="linkedin" type="text" value="{{supplier.linkedin}}" placeholder="http://" />
+            {% if errors.first('linkedin')  %} <div class="alert alert-danger">{{ errors.first('linkedin') }}</div>{% endif %}
+          </li>
+
+          <li>
+            <label for="extrait">{{ 'Extrait'|_ }} <sup>*</sup></label>
+            <textarea name="extrait" id="extrait" rows="4" type="text" placeholder="{{ 'Extrait'|_ }}" >{{supplier.extrait}} </textarea>
+            {% if errors.first('extrait')  %}   <div class="alert alert-danger">{{ errors.first('extrait') }}</div> {% endif %}
+          </li>
+          <li>
+            <label for="id_cazary_minimal">{{ 'Description'|_ }}</label>
+            <textarea name="description1" id="id_cazary_minimal" rows="10" type="text" value="{{supplier.description1}}" placeholder="{{ 'Description'|_ }}" >{{supplier.description1}}</textarea>
+            {% if errors.first('description1')  %}   <div class="alert alert-danger">{{ errors.first('description1') }}</div> {% endif %}
+          </li>
+          <li>
+            <label for="id_cazary_minimal2">{{ 'Description'|_ }}</label>
+            <textarea name="description2" id="id_cazary_minimal2" rows="10" placeholder="Description">{{supplier.description2}}</textarea>
+            {% if errors.first('description2')  %} <div class="alert alert-danger">{{ errors.first('description') }}</div>{% endif %}
+          </li>
+
+          <li>
+            <label for="image">{{ 'Logo'|_ }} <sup>*</sup> </label>
+
+            <input name="image" id="image" type="file" />
+              <br>
+              <img src="{{supplier.image.path}}">
+            {{ errors.first('image') }}
+          </li>
+
+          <li><input type="submit" id="" class="gform_button button" value=" {{ 'Envoyer'|_ }}" tabindex="9" /></li>
+
+      </ul>
+    </form>
+    <!-- ## ###################################  form end  ########################################################### ## -->
+</div>

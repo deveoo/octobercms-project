@@ -27,7 +27,7 @@ localeUrl[en] = "/suppliers"
             {% for supplier in suppliers %}
               <div class="BlocFormateur">
                   <div class="imgFormateur">
-                    <a title="{{ supplier.titre }}" href="details-fournisseur/{{supplier.slug}}"> <img src="{{ supplier.image.path }}" alt="{{ supplier.titre }}" /> </a>
+                    <a title="{{ supplier.titre }}" href="details-fournisseur/{{supplier.slug}}"> <img class="img-responsive" src="{{ supplier.image.path }}" alt="{{ supplier.titre }}" /> </a>
                   </div>
                   <div class="infoFormateur">
                     <h3><a title="{{ supplier.titre }}" href="details-fournisseur/{{supplier.slug}}">{{ supplier.titre }}</a></h3>

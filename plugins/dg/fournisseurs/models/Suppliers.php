@@ -58,7 +58,7 @@ class Suppliers extends Model
     /* Relations */
 
     public function getPaysOptions() {
-      return array('Algérie' => 'Algérie','Maroc' => 'Maroc','Tunisie' => 'Tunisie' );
+      return array('Algérie' => 'Algérie', 'Libye' => 'Libye' ,'Maroc' => 'Maroc','Tunisie' => 'Tunisie' );
     }
 
     /** Get Active suppliers **/

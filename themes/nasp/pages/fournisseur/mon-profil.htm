@@ -7,4 +7,19 @@ robot_follow = "follow"
 
 [viewBag]
 localeUrl[en] = "/mon-profil"
+
+[session]
+security = "user"
+redirect = "login"
 ==
+<div class="col-md-12 col-lg-12 col col-xs-12">
+  <div class="websiteForm">
+
+            <h3>{{ 'Modifier votre profil'|_ }}</h3>
+            {% partial 'account/update' %}
+
+
+
+
+  </div>
+</div>

@@ -253,4 +253,7 @@
   'dg\\postuler\\Controllers\\postulerform' => 'plugins\\dg\\postuler\\controllers\\postulerform.php',
   'Dg\\Produitetservices\\Models\\Produits' => 'plugins\\dg\\produitetservices\\models\\Produits.php',
   'Dg\\Pays\\Models\\Countries' => 'plugins\\dg\\pays\\models\\Countries.php',
+  'dg\\Fournisseurs\\Components\\SupplierFrontForm' => 'plugins\\dg\\fournisseurs\\components\\SupplierFrontForm.php',
+  'dg\\Fournisseurs\\Controllers\\Suppliers' => 'plugins\\dg\\fournisseurs\\controllers\\Suppliers.php',
+  'Dg\\Fournisseurs\\Models\\Suppliers' => 'plugins\\dg\\fournisseurs\\models\\Suppliers.php',
 );

@@ -34,6 +34,7 @@ description = "user layout"
         <link href="{{ 'assets/css/youtube-video-gallery.css' |theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/jquery-ui.css' |theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/slicknav.css' |theme }}" rel="stylesheet">
+				<link rel="stylesheet" type="text/css" href="{{ 'assets/dist/themes/flat/style.css' |theme }}" />
 
 
         {% styles %}
@@ -82,6 +83,7 @@ description = "user layout"
         <script src="{{ 'assets/js/jquery-ui.js'|theme }}"></script>
         <script src="{{ 'assets/js/jquery.slicknav.js'|theme }}"></script>
         <script src="{{ 'assets/js/jquery.inview.js'|theme }}"></script>
+				<script type="text/javascript" src="{{ 'assets/dist/cazary.min.js'|theme }}"></script>
 
         <script>
             $(document).ready(function () {
@@ -310,6 +312,25 @@ description = "user layout"
 					}
 				});
 			});
+		</script>
+
+		<script type="text/javascript">
+(function($, window)
+{
+	$(function($)
+	{
+
+		// customized editor
+		$("textarea#id_cazary_minimal").cazary({
+			commands: "MINIMAL"
+		});
+
+		$("textarea#id_cazary_minimal2").cazary({
+			commands: "MINIMAL"
+		});
+
+	});
+})(jQuery, window);
 		</script>
 
         {% framework extras %}
